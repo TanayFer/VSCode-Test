@@ -1,3 +1,3 @@
 # VSCode-Test
 Test <BR>
-By-Tanay Mantri
+Author-Tanay Mantri
