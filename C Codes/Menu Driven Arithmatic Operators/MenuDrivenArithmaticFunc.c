@@ -2,7 +2,9 @@
 #include<conio.h>
 int addNum(int,int); 
 int subNum(int,int);
+int multNum(int,int);
 float mulNum(float,float);
+int diviNum(int ,int);
 float divNum(float,float);
 int sqNo(long);       
 int cubeNo(long);  
@@ -20,10 +22,14 @@ void main()                      //Function main
 	printf("1 :- Addition\n");
 	printf("2 :- Substraction\n");
 	printf("3 :- Multiplication\n");
-	printf("4 :- Division\n");
-	printf("5 :- Square of a Number\n");
-	printf("6 :- Cube of a Number\n");
-	printf("7 :- Factorial of a Number\n");
+	printf("4 :- Multiplication in Decimal Point\n");
+	printf("5 :- Division\n");
+	printf("6 :- Division\n");
+	printf("7 :- Square of a Number\n");
+	printf("8 :- Cube of a Number\n");
+	printf("9 :- Factorial of a Number\n");
+	printf("10 :- Power\n");
+
 	printf("------------------------------------------------\n");
 	scanf("%d", &OPT);
 	printf("------------------------------------------------\n"); 
@@ -35,19 +41,25 @@ void main()                      //Function main
 		case 2 :  result2 = subNum(a, b);
 		break;
 		
-		case 3 :  result3 = mulNum(a, b);
+		case 3 :  result3 = multNum(a, b);
+		break;
+
+		case 4 :  result3 = mulNum(a, b);
+		break;
+
+		case 5 :  result4 = diviNum(a, b);
 		break;
 		
-		case 4 :  result4 = divNum(a, b);
+		case 6 :  result4 = divNum(a, b);
 		break;
 		
-		case 5 :  result5 = sqNo(a);
+		case 7 :  result5 = sqNo(a);
 		break;  
 		
-		case 6 :  result6 = cubeNo(a);
+		case 8 :  result6 = cubeNo(a);
 		break;
 		
-		case 7 :  result7 = fact(a);
+		case 9 :  result7 = fact(a);
 		break;
     }
 	printf("-----------------------\nMain Menu : Enter 1\n");
@@ -77,6 +89,16 @@ int subNum(int x, int y)       //Function Definition
 	return 0;
 }
 
+int multNum(int x, int y)       //Function Definition
+{
+	int e;
+	printf("Enter 2 numbers\n");
+	scanf("%d %d", &x , &y);
+	e = x * y;
+	printf("Multiplication of %d * %d = %d\n", x,y,e);
+	return 0;
+}
+
 float mulNum(float x, float y)       //Function Definition
 {
 	float e;
@@ -84,6 +106,16 @@ float mulNum(float x, float y)       //Function Definition
 	scanf("%f %f", &x , &y);
 	e = x * y;
 	printf("Multiplication of %.2f * %.2f = %.4f\n", x,y,e);
+	return 0;
+}
+
+int diviNum(int x, int y)       //Function Definition
+{
+	int f;
+	printf("Enter 2 numbers\n");
+	scanf("%d %d", &x , &y);
+	f = x / y;
+	printf("Division of %d / %d = %d\n", x,y,f);
 	return 0;
 }
 
