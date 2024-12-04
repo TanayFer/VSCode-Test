@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
 int addNum(int,int); 
 int subNum(int,int);
 int mulNum(int,int);

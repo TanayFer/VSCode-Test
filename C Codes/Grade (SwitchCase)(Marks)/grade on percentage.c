@@ -7,7 +7,8 @@ int main()
     {
     printf("Enter Percentage: ");
     scanf("%f", &percentage);
-    if (percentage < 0 || percentage > 100) {
+    if (percentage < 0 || percentage > 100) 
+    {
         printf("Error: Percentage must be between 0 till 100.\n");
         return 1;
     }

@@ -19,7 +19,7 @@ int main()
    scanf("%d", & n);
    for (i = 0; i < n; i++) 
       {
-        printf(" %d ", fibonacci_01(i));
+        printf("%d ", fibonacci_01(i));
       }
    return 1;
 }
