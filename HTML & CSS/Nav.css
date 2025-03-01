@@ -1,0 +1,65 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    margin-bottom: auto;
+}
+nav{
+    padding: 10px;
+    margin: 2px;
+    overflow: hidden;
+    background-color: black;
+}
+
+nav a{
+    text-decoration: none;
+    padding: 2%;
+    color: white;
+    background-color: blue;
+}
+
+footer {
+    text-align: center;
+    margin-top: auto;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+#img1 {
+    width: 500px;
+    height: 500px;
+    margin: 2px ;
+    padding: 10px;
+    position: relative;
+    top: auto
+}
+
+#img2 {
+    width: 500px;
+    height: 500px;
+    margin: 2px ;
+    padding: 10px;
+    position: relative;
+    top: auto
+}
+
+#img3 {
+    width: 500px;
+    height: 500px;
+    margin: 2px ;
+    padding: 10px;
+    position: relative;
+    top: auto
+}

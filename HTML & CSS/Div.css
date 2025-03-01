@@ -1,0 +1,14 @@
+#div1 {
+    border: 0.5rem solid black;
+    background-color: #FFC0CB;
+    padding: 1rem;
+    margin: 50px;
+}
+#div2 {
+    border: 0.5rem solid rgb(105, 83, 83);
+    background-color: #e71135;
+    padding: 1rem;
+    margin-left: 4.5rem;
+    height: 70px;
+    width: 50rem;
+}
