@@ -1,0 +1,65 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    
+}
+
+header {
+    background-color: rgb(58, 23, 185);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+nav {
+    color: white;
+    padding: 10px;
+    background-color: rgb(68, 66, 163);
+    text-align: center;
+    overflow: hidden;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 10px; /* Add margin to create space between elements */
+}
+
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 75%;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 10px 60px rgba(0, 0, 0, 0.2); /* Add heavier shadow */
+}
+
+section {
+    margin: 20px 0;
+}
+
+section h2 {
+    color: rgb(58, 23, 185);
+}
+
+ul{
+    line-height: 1.6;
+}
+
+footer {
+    background-color: rgb(58, 23, 185);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
