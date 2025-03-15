@@ -1,5 +1,65 @@
-h1{
+body {
+    background-color: lightyellow;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form-container {
+    background-color: lightcyan;
+    border: 5px groove cyan;
+    padding: 50px;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 50px;
+}
+
+hi {
     text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+    color: darkred;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: darkred;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.inline-label {
+    display: inline;
+    margin-right: 10px;
+}
+
+button {
+    background-color: lightcoral;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: thistle;
 }
