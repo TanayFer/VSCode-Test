@@ -9,16 +9,19 @@
 <body>
     <div class="form-container">
     <h1>Feedback Form</h1>
-
-    <div class="form-container">
         <form>
-            <label for="name">Name:</label> <br>
-            <input type="text" id="name" name="name" required><br><br>
+            <label for="name">Name:</label> 
+            <br><br>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+            <br><br>
 
-            <label for="email">Email:</label> <br>
-            <input type="email" id="email" name="email" required><br><br>
+            <label for="email">Email:</label> 
+            <br><br>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+            <br><br>
 
-            <label for="rating">Rate Our Service</label> <br>
+            <label for="rating">Rate Our Services : </label> 
+            <br>
 
             <input type="radio" id="excellent" name="rating" value="excellent">
             <label for="excellent">Excellent</label>
@@ -32,8 +35,9 @@
             <input type="radio" id="poor" name="rating" value="poor">
             <label for="poor">Poor</label>
 
+            <br><br> 
+            <label for="services">Select services you used</label> 
             <br>
-            <label for="services">Select services you used</label> <br>
 
             <input type="checkbox" id="delivery" name="usedserv" value="delivery">
             <label for="delivery">Delivery</label>
@@ -43,9 +47,11 @@
 
             <input type="checkbox" id="takeaway" name="usedserv" value="takeaway">
             <label for="takeaway">TakeAway</label>
-            <br>
+            <br><br>
 
-            <label for="f-topic">Feedback Topics</label> <br>
+            <label for="f-topic">Feedback Topics</label> 
+            <br><br>
+
             <select id="f-topic" name="f-topic">
                 <option value="quality">Food Quality</option>
                 <option value="service">Service</option>
@@ -54,8 +60,11 @@
             </select>
             <br>
 
-            <label for="comments">Comments:</label> <br>
-            <textarea id="comments" name="comments" rows="5" cols="50"></textarea>
+            <br>
+            <label for="comments">Comments:</label> 
+            <br><br>
+            <textarea id="comments" name="comments" rows="5" cols="50" placeholder="Enter your Comments here"></textarea>
+            <br>
 
         <br>
         <input type="submit" value="Submit">

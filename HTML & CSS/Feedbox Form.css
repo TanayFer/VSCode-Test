@@ -1,56 +1,69 @@
-h1{
+h1 {
     text-align: center;
     color: darkred;
 }
 
 label {
-    display: block;
     margin-top: 10px;
     font-weight: bold;
     color: darkred;
 }
 
-input[type="text"],
-select,
-textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 15px;
-    border: 1px solid #ccc;
-    border-radius: 30px;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-    margin-right: 5px;
-}
 
 .inline-label {
-    display: inline;
+    display: inline-block;
     margin-right: 10px;
 }
 
-button {
-    background-color: lightcoral;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 30px;
-    width: 100%;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: thistle;
-}
-
 .form-container {
-    border: 2px solid #333; /* Add border to the container */
+    border: 2px solid #000000;
     padding: 20px;
-    margin: 20px auto; /* Center the form */
+    margin: 20px auto;
     max-width: 600px;
     border-radius: 10px;
     background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"] {
+    background-color: rgb(196, 116, 116);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;  
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin: 1.2%;
+}
+
+input[type="checkbox"] {
+    margin: 1.2%;
+}
+
+textarea{
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;  
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 5px;  
+    border: 1px solid #000000;
+    box-sizing: border-box;
 }
