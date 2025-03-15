@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="Feedback Form.css">
+</head>
+
+<body>
+
+    <h1>Feedback Form</h1>
+
+    <form>
+        <label for="name">Name:</label> <br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label> <br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="rating" id="r1">Rate Our Service</label> <br>
+
+        <input type="radio" id="rating" name="rating">
+        <label for="excellent" id="rating" name="rating">Excellent</label>
+
+        <input type="radio" id="rating" name="rating">
+        <label for="good" id="rating" name="rating">Good</label>
+
+        <input type="radio" id="rating" name="rating">
+        <label for="fair" id="rating" name="rating">Fair</label>
+
+        <input type="radio" id="rating" name="rating">
+        <label for="poor" id="rating" name="rating">Poor</label>
+
+        <br>
+        <label for="services" id="r1">Select services you used</label> <br>
+
+        <input type="checkbox" id="usedserv" name="usedserv">
+        <label for="delivery" id="usedserv" name="usedserv">Delivery</label>
+
+        <input type="checkbox" id="usedserv" name="usedserv">
+        <label for="dinein" id="usedserv" name="usedserv">Dine-In</label>
+
+        <input type="checkbox" id="usedserv" name="usedserv">
+        <label for="takeaway" id="usedserv" name="usedserv">TakeAway</label>
+        <br>
+
+        <label for="f-topic" id="r1">Feedback Topics</label> <br>
+        <select id="f-topic" name="f-topic">
+            <option value="quality">Food Quality</option>
+            <option value="service">Service</option>
+            <option value="staff">Staff</option>
+            <option value="ambience">Ambience</option>
+        </select>
+        <br>
+
+        <label for="comments" id="r1">Comments:</label> <br>
+        <textarea id="comments" name="comments" rows="5" cols="50"></textarea>
+
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+
+</html>
