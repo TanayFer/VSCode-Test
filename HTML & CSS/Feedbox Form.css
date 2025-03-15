@@ -1,23 +1,4 @@
-body {
-    background-color: lightyellow;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-form-container {
-    background-color: lightcyan;
-    border: 5px groove cyan;
-    padding: 50px;
-    max-width: 500px;
-    margin: auto;
-    border-radius: 50px;
-}
-
-hi {
+h1{
     text-align: center;
     color: darkred;
 }
@@ -62,4 +43,14 @@ button {
 
 button:hover {
     background-color: thistle;
+}
+
+.form-container {
+    border: 2px solid #333; /* Add border to the container */
+    padding: 20px;
+    margin: 20px auto; /* Center the form */
+    max-width: 600px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
 }
