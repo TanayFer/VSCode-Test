@@ -1,3 +1,8 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 header {
     background-color: orangered;
     color: white;
@@ -25,36 +30,37 @@ nav a {
     color: white;
 }
 
-main{
+main {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 20px;
+    flex: 1; /* Allow the main content to grow and take up available space */
 }
 
-section{
+section {
     flex: 1;
     padding: 20px;
-    border: 0.1rem solid black
+    border: 0.1rem solid black;
 }
 
-section video{
+section video {
     position: relative;
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
-.Location{
+.Location {
     background-color: rgb(224, 224, 182);
 }
 
-footer{
+footer {
     background-color: orangered;
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    position : relative; /* Changed to relative for better layout control */
+    bottom: -50px; /* Adjusted to ensure it stays at the bottom of the page */
+    width: auto; /* Ensure the footer spans the full width */
 }
