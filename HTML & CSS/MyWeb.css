@@ -1,0 +1,75 @@
+html,
+body {
+    border: 0px;
+    background-color: lightyellow;
+}
+
+.header {
+    background-color: salmon;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: coral;
+    text-align: center;
+    padding: 0.5%;
+    border: 1px solid black;
+}
+
+.navbar a {
+    float: center;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.about {
+    padding-left: 20px;
+    text-align: left;
+}
+
+aside {
+    position: fixed;
+    padding: 2%;
+    right: 8px;
+    top: 17.5rem;
+    width: 6.5%;
+    height: 350px;
+    background-color: lightgrey;
+    border: 1px solid black;
+}
+
+.footer {
+    background-color: salmon;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 25px;;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 98%;
+}
+
+.about{
+    position: fixed;
+    top: 20rem;
+    padding-left: 20px;
+    text-align: left;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-weight: bolder;
+    font-size: 2rem;
+}
