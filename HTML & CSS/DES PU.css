@@ -61,7 +61,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    position : relative; /* Changed to relative for better layout control */
-    bottom: -50px; /* Adjusted to ensure it stays at the bottom of the page */
-    width: auto; /* Ensure the footer spans the full width */
+    position : relative; 
+    bottom: -50px; 
+    width: auto;
 }
