@@ -2,6 +2,7 @@ header {
     background-color: orangered;
     color: white;
     text-align: center;
+    width: auto;
 }
 
 header h1 {
