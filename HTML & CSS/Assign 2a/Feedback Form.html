@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Feedback Form
+    </title>
+    <link rel="stylesheet" href="Feedback Form.css">
+</head>
+
+<body>
+
+    <h1>Feedback Form</h1>
+    <form action="#" method="post">
+        <div class="form-row"> <label for="name">Name:</label> <input type="text" id="name" name="name"> </div>
+        <div class="form-row"><label for="email">Email:</label><input type="email" id="email" name="email">
+        </div>
+        <div class="form-row">
+            <label>How would you rate our service?</label>
+            <label class="inline-label"> <input type="radio" name="rating" value="excellent"> Excellent</label>
+            <label class="inline-label"><input type="radio" name="rating" value="good"> Good</label>
+            <label class="inline-label"><input type="radio" name="rating" value="fair"> Fair</label>
+        </div>
+
+        <div class="form-row">
+            <label>What did you like about us? (choose at least one) </label>
+            <label class="inline-label"><input type="checkbox" name="features" value="design"> Design</label>
+            <label class="inline-label"><input type="checkbox" name="features" value="usability"> Usability</label>
+            <label class="inline-label"><input type="checkbox" name="features" value="performance"> Performance</label>
+        </div>
+
+        <div class="form-row">
+            <label for="country">Country: </label>
+            <select id="country" name="country">
+                <option value="">--Please choose--</option>
+                <option value="in">India</option>
+                <option value="ca">Canada</option>
+                <option value="uk">United Kingdom</option>
+                <option value="au">Australia</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <label for="comments">Additional Comments: </label> <textarea id="comments" name="comments"
+                rows="4"></textarea>
+        </div>
+
+        <div class="form-row">
+            <label class="inline-label"> <input type="checkbox" name="agree"> I agree to the terms and
+                conditions </label>
+        </div>
+
+        <div class="form-row">
+            <button type="submit">Submit Feedback</button>
+        </div>
+    </form>
+</body>
+
+</html>
