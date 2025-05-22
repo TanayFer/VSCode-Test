@@ -1,0 +1,19 @@
+.menu{
+    display: flex;
+    justify-content: space-around;
+    background-color: antiquewhite;
+    padding: 10px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: brown;
+    padding: 8px;
+}
+
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
