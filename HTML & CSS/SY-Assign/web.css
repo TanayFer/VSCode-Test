@@ -1,0 +1,15 @@
+body{
+    margin: 1%;
+}
+.container{
+    text-align: center;
+}
+header{
+    background-color: blue;
+}
+a{
+    padding: 1%;
+}
+footer{
+    background-color: gold;
+}

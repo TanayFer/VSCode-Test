@@ -1,0 +1,32 @@
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: DodgerBlue;
+}
+
+.flex-container div {
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+.a {
+    background-color: blue;
+}
+
+.b {
+    background-color: chocolate;
+}
+
+.c {
+    background-color: violet;
+}
+
+@media (max-width: 480px){
+    .flex-container{
+        font-size: small;
+        padding: 1%;
+    }
+}

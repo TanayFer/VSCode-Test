@@ -1,0 +1,12 @@
+body{
+    margin: 10px;
+}
+.container{
+    font-size: small;
+}
+a{
+    padding: 10%;
+}
+nav :hover{
+    background-color: blue;
+}

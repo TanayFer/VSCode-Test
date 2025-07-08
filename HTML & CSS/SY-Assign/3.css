@@ -1,0 +1,11 @@
+body{
+    margin: 1%
+}
+input{
+    border-color: black 10px;
+    padding: 1%;
+    width: 25%;
+}
+.container{
+    text-align: center;
+}
