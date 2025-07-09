@@ -1,0 +1,23 @@
+body{
+    margin: 1%;
+    background-color: burlywood;
+}
+.container{
+    text-align: center;
+}
+header{
+    background-color: blue;
+    transition: transform 0.3s ease;
+}
+header:hover {
+    transform: scale(1.);
+}
+.main img{
+    width: 20%;
+}
+img{
+    border: 10px solid black;
+}
+p{
+    font-size: 125%;
+}

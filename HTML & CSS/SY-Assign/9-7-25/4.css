@@ -1,0 +1,14 @@
+body{
+    margin: 1%;
+}
+input{
+    padding: 1%;
+    width: 25%;
+}
+.container{
+    border: 2px solid black;
+    padding: 1%;
+    width: 35rem;
+    margin: 2rem auto;
+    text-align: center;
+}

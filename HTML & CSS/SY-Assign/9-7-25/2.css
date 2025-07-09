@@ -1,0 +1,39 @@
+body{
+    margin: 1.5%;
+}
+.container{
+    text-align: center;
+}
+nav{
+    padding: 1%;
+    background-color: blanchedalmond;
+}
+nav a{
+    margin: 1%;
+}
+.nav-btn{
+    padding: 5px 15px;
+    background-color: whitesmoke;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #222;
+    transition: background 0.2s, color 0.2s;
+}
+.nav-btn:hover {
+    background-color: #ffe4b5;
+    color: #000;
+}
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 0.5%;
+        font-size: 90%;
+    }
+    .nav-btn {
+        display: block;
+        margin: 8px auto;
+        width: 90%;
+        font-size: 110%;
+    }
+}

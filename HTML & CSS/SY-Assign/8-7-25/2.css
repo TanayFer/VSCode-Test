@@ -1,11 +1,17 @@
 body{
-    margin: 10px;
+    margin: 1%;
 }
 .container{
     font-size: small;
 }
-a{
-    padding: 10%;
+nav{
+    background-color: lightblue;
+    padding: 2%;
+    text-align: center;
+}
+nav a{
+    margin: 10%;
+    font-size: large;
 }
 nav :hover{
     background-color: blue;
