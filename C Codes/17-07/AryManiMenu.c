@@ -4,8 +4,6 @@ int main()  {
     int ary[100], nos=0, opt, a;
     do
     {
-
-    
     printf("1---------Array Menu-------------\n");
     printf("\nInsert Elements:- 1");
     printf("\nView Elements:- 2");
