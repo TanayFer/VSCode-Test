@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <form action="#" method="post">
+            <div class="form-row">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <br>
+            <div class="form-row">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <br>
+            <div class="form-row">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <br>
+            <div class="form-row">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        let ageString = prompt('Enter your age:');
+        let age = parseInt(ageString);
+        if (isNaN(age)) {
+            alert('Please enter a valid number for your age.');
+        } else if (age >= 18 && age <= 80) {
+            alert('You are eligible for driving.');
+        } else {
+            alert('You are not eligible for driving.');
+            e.preventDefault();
+        }
+</script>
+</body>
+</html>
