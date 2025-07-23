@@ -11,7 +11,7 @@ Purpose: To store a value (like a number or text) in a variable. A variable is l
 
 Example:
 # This stores the number 25 in a box named 'my_age'
-my_age <- 25
+my_age = 25
 
 # This stores the text "John" in a box named 'my_name'
 my_name <- "John"
@@ -24,10 +24,10 @@ Purpose: To create a list of items. In R, a list of items is called a "vector". 
 
 Example:
 # Creates a list of numbers
-my_scores <- c(85, 92, 78, 95)
+my_scores = c(85, 92, 78, 95)
 
 # Creates a list of names
-friends <- c("Tanay", "Anish", "Shreya")
+friends = c("Tanay", "Anish", "Shreya")
 
 
 ---
@@ -72,7 +72,7 @@ COMMAND: length()
 Purpose: To count how many items are in a vector.
 
 Example:
-my_list <- c(10, 20, 30, 40)
+my_list = c(10, 20, 30, 40)
 length(my_list)  # The result will be 4
 
 
@@ -84,8 +84,8 @@ Purpose: To check what type of data is inside a variable.
 `is.numeric()` asks a TRUE/FALSE question: "Is this data a number?"
 
 Example:
-my_number <- 100
-my_text <- "one hundred"
+my_number = 100
+my_text = "one hundred"
 
 typeof(my_number)       # Result: "double" (R's term for a number)
 typeof(my_text)         # Result: "character" (R's term for text)
@@ -101,10 +101,10 @@ Purpose: To arrange a vector of data into a grid with rows and columns.
 
 Example:
 # First, create a vector of data
-all_numbers <- 1:6  # This gives us 1, 2, 3, 4, 5, 6
+all_numbers = 1:6  # This gives us 1, 2, 3, 4, 5, 6
 
 # Now, arrange it into a 2x3 matrix (2 rows, 3 columns)
-my_matrix <- matrix(all_numbers, nrow=2, ncol=3)
+my_matrix = matrix(all_numbers, nrow=2, ncol=3)
 
 
 ---
@@ -142,8 +142,8 @@ Purpose: To add new rows or columns to a matrix.
 
 Example:
 # Let's use our 2x3 my_matrix
-new_row <- c(7, 8, 9)
-matrix_with_new_row <- rbind(my_matrix, new_row)
+new_row = c(7, 8, 9)
+matrix_with_new_row = rbind(my_matrix, new_row)
 
-new_column <- c(10, 20)
-matrix_with_new_column <- cbind(my_matrix, new_column)
+new_column = c(10, 20)
+matrix_with_new_column = cbind(my_matrix, new_column)
