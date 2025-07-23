@@ -1,0 +1,44 @@
+body{
+    margin: 1rem;
+}
+header{
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    padding: 10px;
+}
+header p{
+    font-size: xx-large;
+}
+.container{
+    align-items: center;
+    text-align: center;
+}
+footer{
+    text-align: center;
+    color: aliceblue;
+    background-color: black;
+    padding: 10px;
+}
+.Headings h1,h2,h3,h4,h5,h6{
+    text-align: center;
+    color: aquamarine;
+    background-color: blueviolet;
+    border-radius: 10px;
+}
+.format{
+    text-align: center;
+}
+img{
+    height: 350px;
+    width: 450px;
+}
+.anchor{
+    background-color: black;
+    border-radius: 10px;
+}
+.anchor a{
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+}
