@@ -1,0 +1,89 @@
+R Commands for Beginners - A Quick Guide
+=========================================
+
+This guide explains the basic R commands you've used. R is a language for statistics and data analysis. Think of these commands as instructions you give to the computer.
+
+
+---
+COMMAND: = or <- (Assignment)
+-----------------------------
+Purpose: To store a value (like a number or text) in a variable. A variable is like a named box where you keep information.
+
+Example:
+# This stores the number 25 in a box named 'my_age'
+my_age <- 25
+
+
+---
+COMMAND: + and - (Arithmetic Operators)
+----------------------------------------
+Purpose: To perform basic math like addition (+) and subtraction (-). When used on vectors (lists), the math is done on each pair of elements.
+
+Example (Single Numbers):
+price <- 10
+tax <- 2
+total_cost <- price + tax # total_cost is now 12
+
+Example (Vectors):
+# vector1 is (10, 20)
+# vector2 is (5, 2)
+vector1 <- c(10, 20)
+vector2 <- c(5, 2)
+vector1 - vector2 # The result will be a new vector: (5, 18)
+
+
+---
+COMMAND: c() (Combine or Create a Vector)
+-----------------------------------------
+Purpose: To create a list of items. In R, a list is called a "vector". The `c` stands for "combine".
+
+Example:
+# Creates a list of scores
+my_scores <- c(85, 92, 78, 95)
+
+
+---
+COMMAND: [] (Square Brackets for Indexing)
+------------------------------------------
+Purpose: To get specific items out of a vector using their position number (or "index").
+
+Example:
+# Let's say we have a list of colors
+colors <- c("red", "green", "blue", "yellow")
+
+# Get the 2nd item ("green")
+colors[2]
+
+# Get the 1st and 4th items
+colors[c(1, 4)] # The result is ("red", "yellow")
+
+
+---
+COMMAND: : (Colon for Simple Sequences)
+---------------------------------------
+Purpose: To create a simple list of numbers that increases by exactly 1 each time.
+
+Example:
+# Creates numbers from 1 to 5
+1:5 # Result: 1 2 3 4 5
+
+
+---
+COMMAND: seq() (Sequence)
+--------------------------
+Purpose: To create more complex lists of numbers where you can control the start, end, and the "step" (the amount to jump by).
+
+Example:
+# Creates a sequence from 0 to 10, jumping by 2
+seq(from=0, to=10, by=2) # Result: 0 2 4 6 8 10
+
+
+---
+COMMAND: print()
+-----------------
+Purpose: To explicitly display the value of a variable or the result of a calculation on the screen. Often, R does this automatically, but `print()` makes it certain.
+
+Example:
+my_variable <- "Hello World"
+print(my_variable)
+
