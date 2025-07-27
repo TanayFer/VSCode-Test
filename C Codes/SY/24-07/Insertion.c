@@ -20,9 +20,8 @@ int main()	{
 	    int a = ary[i];
 	    int j = i - 1;
 	
-	    while (j >= 0 && ary[j] > a) {
+	    for (; j >= 0 && ary[j] > a; j--) {
 	        ary[j + 1] = ary[j];
-	        j = j - 1;
 	    }
 	    
 	    ary[j + 1] = a;
