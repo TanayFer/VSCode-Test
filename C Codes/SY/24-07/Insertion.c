@@ -16,19 +16,16 @@ int main()	{
 	}
 	
 	//Insertion Sorting
-	for(int i=0; i<no-1; i++) {
-		int a = ary[i];
-		for(int j=0; j<no; j++) 
-		{
-			for(int k=0; k<no-i-1; k++) 
-			{	
-				if(ary[k] > ary[k+1]) {	
-					a = ary[k];		
-					ary[k] = ary[k+1];
-					ary[k+1] = a;
-				}		
-			}		
-		}
+	for (int i = 1; i < no; i++) {
+	    int a = ary[i];
+	    int j = i - 1;
+	
+	    while (j >= 0 && ary[j] > a) {
+	        ary[j + 1] = ary[j];
+	        j = j - 1;
+	    }
+	    
+	    ary[j + 1] = a;
 	}
 	//O/P for Sorted Array
 	printf("\nSorted\n");
