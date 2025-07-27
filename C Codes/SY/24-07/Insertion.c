@@ -1,7 +1,6 @@
 #include<stdio.h>	
-#include<string.h>
 int main()	{
-	int ary[100], no;
+	int ary[1000], no;
 	printf("Enter number of elements you want to enter: ");
 	scanf("%d", &no);
 	printf("Enter %d elements\n", no);
