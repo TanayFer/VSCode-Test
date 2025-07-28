@@ -1,0 +1,26 @@
+Logic and Algorithm for "Hello, World!"
+Objective: To display the text "Hello, World!" on the screen.
+
+Logic:
+The core logic is to use a standard library function that can send a sequence of characters (a string) to the standard output device, which is typically the computer screen or console.
+
+Include Header: The C language is small and relies on libraries for most of its functionality. To perform standard input and output (like printing to the screen), we need to include the "Standard Input/Output" header file, stdio.h. This file contains the declaration for the printf function.
+
+Main Function: Every C program must have a main function. This is the entry point of the program, meaning the operating system starts executing the code from the beginning of the main function.
+
+Printing: Inside the main function, we call the printf function. We pass the string of text we want to display, "Hello, World!\n", as an argument to this function. The \n at the end is an escape sequence that tells the console to move the cursor to the next line after printing the text.
+
+Return Statement: The main function is declared to return an integer (int main()). By convention, returning 0 signifies that the program has executed successfully without any errors.
+
+Algorithm:
+Start
+
+Include the stdio.h header file.
+
+Define the main function.
+
+Use the printf function to print the string "Hello, World!".
+
+Return 0 from the main function.
+
+End

@@ -1,0 +1,37 @@
+Logic and Algorithm for Binary Search
+Objective: To efficiently find a specific element (the "key") in a sorted array.
+
+Logic:
+Binary search operates on the "divide and conquer" principle. It only works on arrays that are already sorted.
+
+Instead of checking elements one by one, it starts by checking the middle element of the array.
+
+If the middle element is the key, the search is over.
+
+If the key is greater than the middle element, we know the key must be in the right half of the array (if it exists at all). We can completely ignore the left half.
+
+If the key is less than the middle element, we know the key must be in the left half of the array. We can ignore the right half.
+
+This process is repeated on the remaining (and much smaller) half of the array. We again check the middle element of this new, smaller segment and decide whether to keep the left or right part. This continues until the element is found or the search area becomes empty. This method drastically reduces the number of comparisons needed compared to a linear search.
+
+Algorithm:
+Start
+
+Get a sorted array of elements and the key to search for.
+
+Initialize two pointers: low = 0 and high = size - 1.
+
+Repeat the following steps while low is less than or equal to high:
+a. Calculate the middle index: mid = low + (high - low) / 2.
+b. Compare the element at arr[mid] with the key.
+c. If arr[mid] is equal to key:
+i. Print "Element found at position mid".
+ii. Go to Step 6.
+d. If arr[mid] is less than key:
+i. The key might be in the right half. Update low = mid + 1.
+e. If arr[mid] is greater than key:
+i. The key might be in the left half. Update high = mid - 1.
+
+If the loop finishes, the element was not found. Print "Element not found".
+
+End

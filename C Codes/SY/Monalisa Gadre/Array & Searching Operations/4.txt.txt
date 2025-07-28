@@ -1,0 +1,43 @@
+Logic and Algorithm for Merging Two Sorted Arrays
+Objective: To combine two already sorted arrays into a single new array that is also sorted.
+
+Logic:
+The core idea is to efficiently build the new, merged array by picking the smallest available element from the two input arrays at each step.
+
+We use three pointers (or index variables): i for the first array, j for the second array, and k for the resulting merged array.
+
+We compare the elements at arr1[i] and arr2[j]. Whichever is smaller is the next element to be placed in the result array at position k. After copying the element, we advance the pointer of the array from which the element was taken, as well as the pointer k for the result array.
+
+This comparison process continues until we have completely exhausted one of the input arrays. At that point, the remaining elements in the other array are already sorted, so we can simply copy them all directly to the end of the result array.
+
+Algorithm:
+Start
+
+Get two sorted arrays, arr1 (with size1) and arr2 (with size2).
+
+Create a new array result with a size of size1 + size2.
+
+Initialize three index variables: i = 0, j = 0, k = 0.
+
+Main Merge Loop: Repeat the following while i < size1 AND j < size2:
+a. If arr1[i] is less than or equal to arr2[j]:
+i. Copy arr1[i] to result[k].
+ii. Increment i.
+b. Else:
+i. Copy arr2[j] to result[k].
+ii. Increment j.
+c. Increment k.
+
+Copy Remaining Elements: After the main loop, one array might still have elements left.
+
+Repeat the following while i < size1:
+a. Copy arr1[i] to result[k].
+b. Increment i and k.
+
+Repeat the following while j < size2:
+a. Copy arr2[j] to result[k].
+b. Increment j and k.
+
+The result array now contains all the elements from arr1 and arr2 in sorted order.
+
+End
