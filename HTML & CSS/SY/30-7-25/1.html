@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Colspan & Rowspan
+    </title>
+    <style>
+        body {
+            margin: 10px;
+        }
+        .container {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        table {
+            border-collapse: collapse;
+            width: 400px;
+            height: 150px;
+            background: #f9f9f9;
+        }
+        table, td, th {
+            border: 1px solid black;
+        }
+        td, th {
+            padding: 12px 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td rowspan="2">Name</td>
+                <td>Firstname</td>
+            </tr>
+            <tr>
+                <td>Lastname</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
