@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Task
+    </title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 20px;
+        }
+        iframe {
+            width: 80vw;
+            height: 60vh;
+            border: 2px solid #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+        }
+        .btn-group {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 8px 18px;
+            border-radius: 6px;
+            border: none;
+            background: #4a90e2;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        button:hover {
+            background: #357abd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="btn-group">
+            <button onclick="document.getElementById('myframe').src='https://th.bing.com/th/id/OIP.IvVncQJhQmWfwSEOkOkXOwHaEK?w=333&h=187&c=7&r=0&o=7&pid=1.7&rm=3'">Bird</button>
+            <button onclick="document.getElementById('myframe').src='https://th.bing.com/th/id/OIP.FsdknRTJk3xqLHGTbQaMmQHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3'">Animal</button>
+            <button onclick="document.getElementById('myframe').src='https://th.bing.com/th/id/R.198927b6f454d5e711620055f5339a45?rik=I%2bLJjsclAfrh0w&riu=http%3a%2f%2fhelonational.com%2fwp-content%2fuploads%2f2016%2f03%2fNational-flower-of-India-Lotus.jpg&ehk=WKKVtD1fMHJ8lOzqpsXN3zUjW0AgfjT%2fVY3JtIxEqK0%3d&risl=&pid=ImgRaw&r=0'">Flower</button>
+        </div>
+        <iframe id="myframe" src="https://www.wikipedia.org" frameborder="0"></iframe>
+    </div>
+</body>
+</html>

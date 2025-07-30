@@ -1,22 +1,22 @@
 #include <stdio.h>
 
 void binarySearch(int arr[], int no, int key) {
-    int low = 0;
-    int high = no - 1;
+    int bottom = 0;
+    int top = no - 1;
     int mid;
     int found = 0;
 
-    while (low <= high) {
-        mid = low + (high - low) / 2;
+    while (bottom <= top) {
+        mid = bottom + (top - bottom) / 2;
 
         if (arr[mid] == key) {
             printf("Element found at position %d.\n", mid+1);
             found = 1;
             break;
         } else if (arr[mid] < key) {
-            low = mid + 1;
+            bottom = mid + 1;
         } else {
-            high = mid - 1;
+            top = mid - 1;
         }
     }
 
