@@ -1,0 +1,35 @@
+c() - Combine/Create Vector
+Combines multiple items into a single list (vector).
+
+data.frame() - Create Data Table
+Organizes one or more vectors into a table with columns and rows.
+
+dim() - Get Dimensions
+Returns the number of rows and columns in a data table.
+
+$ - Access Column
+Selects a single column from a data frame by its name.
+
+colnames() - Get/Set Column Names
+Checks or changes the names of the columns in a data frame.
+
+cbind() - Column Bind
+Joins tables or vectors together side-by-side to create a wider table.
+
+subset() - Filter Data
+Creates a new data table containing only the rows that match a specific condition.
+
+plot() - Create a Graph
+Generates a two-dimensional plot from x and y data points.
+
+Plot Parameters (main, xlab, ylab, type, col, etc.)
+Options used inside the plot command to customize its appearance.
+
+abline() - Add a Straight Line
+Draws a horizontal, vertical, or sloped line on top of an existing plot.
+
+scan() - Read User Input
+Pauses the script to allow the user to type data directly into the console.
+
+for Loop - Repeat a Task
+Executes a block of code repeatedly for each item in a given sequence.

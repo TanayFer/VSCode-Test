@@ -1,0 +1,76 @@
+The c() Command
+Basic Meaning: "Combine" or "Concatenate".
+
+Concept and Explanation: This is one of the most fundamental commands in R. Its main purpose is to gather individual items and combine them into a single list or sequence, which is called a vector. Think of it like making a grocery list where you write down each item one after another.
+
+Example: The command Names = c("Tanay", "Anish", "Ashish") takes three separate text values ("Tanay", "Anish", and "Ashish") and groups them together into a single vector named Names.
+
+The data.frame() Command
+Basic Meaning: "Create a data table".
+
+Concept and Explanation: This command takes multiple vectors (lists) of the same length and organizes them into a table with rows and columns, similar to a spreadsheet in Excel. Each vector you provide becomes a column in the table. It's essential for organizing related data together.
+
+Example: D = data.frame(Names, Stats, Math) creates a table named D. It uses the Names vector as the first column, the Stats vector as the second, and the Math vector as the third.
+
+The dim() Command
+Basic Meaning: "Dimensions".
+
+Concept and Explanation: This command tells you the size of your data table. It returns two numbers: the first is the number of rows, and the second is the number of columns. It's a quick way to check the shape of your dataset.
+
+Example: A = dim(D) inspects the data frame D and finds out how many rows and columns it has. The result (e.g., 4 rows, 3 columns) is stored in the variable A.
+
+The $ Operator
+Basic Meaning: "Access a column" or "Select".
+
+Concept and Explanation: The dollar sign is a shortcut used to pull out a single, specific column from a data frame by its name. It's like telling R, "From this data frame, give me only the column named...".
+
+Example: A1 = D$Stats looks inside the D data frame, finds the column named Stats, and copies all of its values into a new variable A1.
+
+The colnames() Command
+Basic Meaning: "Column Names".
+
+Concept and Explanation: This command lets you either see the current names of all columns in a data frame or change them to something new. You can change one name at a time or all of them at once.
+
+Example: colnames(D) = c("A", "B", "C") takes the data frame D and replaces its existing column names with "A", "B", and "C". The command colnames(D)[1] = "A1" targets only the first column and renames it to "A1".
+
+The cbind() Command
+Basic Meaning: "Column Bind".
+
+Concept and Explanation: This command takes two or more data frames or vectors and joins them together side-by-side, creating a wider table. It's like placing two spreadsheets next to each other and combining them into one. The rows must match up.
+
+Example: D1 = cbind(D, History) takes the existing data frame D and adds the History vector as a new column on the far right, creating a new, wider data frame called D1.
+
+The subset() Command
+Basic Meaning: "Filter" or "Select a portion".
+
+Concept and Explanation: This is a powerful command used to select rows from a data frame that meet a specific condition. You tell it which data to look at and what rule to follow, and it gives you back a new data frame containing only the rows that satisfy the rule.
+
+Example: D2 = subset(D1, subset = Math < 20) creates a new data frame D2 that contains only the rows from D1 where the value in the Math column is less than 20.
+
+The plot() Command
+Basic Meaning: "Make a graph".
+
+Concept and Explanation: This is the primary command for creating simple 2D graphs in R. At its most basic, you give it two vectors of numbers (one for the x-axis and one for the y-axis), and it creates a scatter plot, placing a point for each corresponding pair of values. You can add many options to customize the look of the graph.
+
+Example: plot(M1, M2) creates a graph where the values from vector M1 are used for the horizontal positions (x-axis) and the values from M2 are used for the vertical positions (y-axis). Options like main, xlab, type, lwd, and col are used to add a title, label the axes, change the plot type (line, points, etc.), adjust line thickness, and set the color.
+
+The abline() Command
+Basic Meaning: "Add a line".
+
+Concept and Explanation: After a plot has already been created, this command is used to draw a straight line on top of it. You can draw horizontal (h), vertical (v), or sloped lines. It's very useful for adding reference lines or thresholds to a graph.
+
+Example: abline(h = 20) draws a perfectly horizontal line across the entire plot at the y-axis value of 20. abline(v = 23.5) draws a vertical line at the x-axis value of 23.5.
+
+The scan() Command
+Basic Meaning: "Scan for input".
+
+Concept and Explanation: This command pauses the program and allows the user to type or paste data directly into the console. R "scans" this input and stores it in a variable. It's a simple way to get data into R without hard-coding it in the script.
+
+Example: data1 = scan() waits for the user to enter numbers. Once the user is done, all the entered numbers are stored as a vector in the variable data1.
+
+The for Loop
+Basic Meaning: "Repeat for each item".
+
+Concept and Explanation: A for loop is a fundamental programming structure used to repeat a block of code a specific number of times. You give it a sequence (e.g., numbers 1 to 15), and it executes the code inside the {} brackets once for each item in that sequence.
+
+Example: for(i in 1:15) sets up a loop that will run 15 times. The first time it runs, the variable i will be 1. The second time, i will be 2, and so on, until i is 15.
