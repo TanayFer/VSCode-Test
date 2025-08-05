@@ -1,0 +1,81 @@
+Merge Sort Algorithm Documentation
+
+1. Program Title: Merge Sort Implementation
+
+2. Author: [TanayFer]
+
+3. Date: August 2, 2025
+
+4. Purpose:
+   This program implements the Merge Sort algorithm to sort an array of integers in ascending order. Merge Sort is a highly efficient, comparison-based sorting algorithm that follows the Divide and Conquer paradigm.
+
+5. Algorithm Logic (High-Level Explanation):
+
+   Merge Sort works by recursively dividing the input array into two halves until each sub-array contains only one element (which is considered sorted by definition). Then, it repeatedly merges these sorted sub-arrays back together to produce new sorted sub-arrays until there is only one fully sorted array remaining.
+
+   The core idea can be broken down into three steps:
+   a.  **Divide**: Split the unsorted array into two halves.
+   b.  **Conquer**: Recursively sort each of the two halves.
+   c.  **Combine (Merge)**: Merge the two sorted halves back into a single sorted array.
+
+6. Function-wise Explanation:
+
+   a.  `void mergeSort(int arr[], int l, int r)`:
+       - **Purpose**: This is the recursive function that implements the "Divide" and "Conquer" steps of Merge Sort. It sorts the sub-array `arr` from index `l` (left) to `r` (right).
+       - **Parameters**:
+         - `arr[]`: The integer array to be sorted.
+         - `l`: The starting index of the current sub-array.
+         - `r`: The ending index of the current sub-array.
+       - **Logic**:
+         1.  **Base Case (`if (l < r)`):** The recursion continues only if the left index `l` is less than the right index `r`. If `l` is equal to `r`, it means the current segment has only one element, which is already considered sorted. This is the stopping condition for the recursion.
+         2.  **Calculate Middle Index (`int m = l + (r - l) / 2;`):** It calculates the middle index `m` of the current sub-array. This splits the sub-array into two approximately equal halves: `arr[l...m]` and `arr[m+1...r]`. The `(r - l) / 2` calculation prevents potential integer overflow compared to `(l + r) / 2` for very large `l` and `r` values.
+         3.  **Recursive Calls (Divide and Conquer):**
+             - `mergeSort(arr, l, m);`: Recursively calls `mergeSort` to sort the left half of the current sub-array.
+             - `mergeSort(arr, m + 1, r);`: Recursively calls `mergeSort` to sort the right half of the current sub-array.
+             These calls continue until the base case (single-element arrays) is reached.
+         4.  **Merge (`merge(arr, l, m, r);`):** Once the two halves (`arr[l...m]` and `arr[m+1...r]`) are sorted by the recursive calls, this function is called to combine them back into a single sorted sub-array `arr[l...r]`.
+
+   b.  `void merge(int arr[], int l, int m, int r)`:
+       - **Purpose**: This function performs the "Combine" step. It takes two sorted sub-arrays (`arr[l...m]` and `arr[m+1...r]`) and merges them into a single sorted sub-array `arr[l...r]`.
+       - **Parameters**:
+         - `arr[]`: The main array.
+         - `l`: The starting index of the first sorted sub-array.
+         - `m`: The ending index of the first sorted sub-array.
+         - `r`: The ending index of the second sorted sub-array.
+       - **Logic**:
+         1.  **Calculate Sub-array Sizes (`n1`, `n2`):**
+             - `n1 = m - l + 1;`: Determines the number of elements in the first sub-array.
+             - `n2 = r - m;`: Determines the number of elements in the second sub-array.
+         2.  **Create Temporary Arrays (`L[]`, `R[]`):** Two temporary arrays, `L` (for the left sub-array) and `R` (for the right sub-array), are created to hold the elements during the merging process.
+         3.  **Copy Data to Temporary Arrays:** Elements from `arr[l...m]` are copied into `L[]`, and elements from `arr[m+1...r]` are copied into `R[]`.
+         4.  **Merge (Comparison and Placement):**
+             - Three pointers `i`, `j`, and `k` are initialized:
+               - `i`: points to the current element in `L[]`.
+               - `j`: points to the current element in `R[]`.
+               - `k`: points to the current position in the original array `arr[]` where elements are to be placed.
+             - The `while (i < n1 && j < n2)` loop compares elements from `L[i]` and `R[j]`. The smaller element is placed into `arr[k]`, and its respective pointer (`i` or `j`) is incremented. The `k` pointer is also incremented.
+         5.  **Copy Remaining Elements:** After the main `while` loop, one of the temporary arrays might still have remaining elements (if one sub-array was exhausted before the other). The subsequent `while (i < n1)` and `while (j < n2)` loops copy any remaining elements from `L[]` or `R[]` into `arr[]`, respectively. This ensures all elements are moved back to the original array in sorted order.
+
+   c.  `int main()`:
+       - **Purpose**: The entry point of the program. It handles user interaction (input), calls `mergeSort`, and prints the sorted array.
+       - **Logic**:
+         1.  **Declare Array**: An integer array `arr` with a maximum capacity of 100 elements is declared.
+         2.  **Get User Input**:
+             - Prompts the user to enter the number of elements they wish to sort (`no`).
+             - Includes basic input validation to ensure `no` is between 1 and 100.
+             - Reads `no` integer elements from the user into `arr`.
+         3.  **Print Original Array**: Displays the elements of the array before sorting.
+         4.  **Call `mergeSort`**: Initiates the sorting process by calling `mergeSort(arr, 0, no - 1)`. `0` is the starting index, and `no - 1` is the last index of the user-provided data.
+         5.  **Print Sorted Array**: After `mergeSort` completes, it prints the now sorted elements of the array.
+         6.  **Return 0**: Indicates successful program execution.
+
+7. How Odd/Even Array Lengths Are Handled:
+   The Merge Sort algorithm (and this specific implementation) inherently handles arrays of both odd and even lengths without needing explicit checks or modifications to the data (like adding a '0').
+   - The calculation of the middle index `m = l + (r - l) / 2` automatically ensures that when an array segment has an odd number of elements, one of the resulting halves will be one element larger than the other. For example, an array of 7 elements will be split into halves of 4 and 3 elements.
+   - The `merge` function then correctly calculates the sizes (`n1` and `n2`) of these potentially uneven halves and merges them efficiently. The final `while` loops in `merge` ensure that any remaining elements from either temporary array are copied back, handling cases where one sub-array is exhausted before the other.
+
+8. Time and Space Complexity:
+   - **Time Complexity**: O(n log n) in all cases (best, average, worst). This is because the array is always divided into halves (log n divisions), and merging takes linear time (O(n)) at each level of recursion.
+   - **Space Complexity**: O(n) due to the temporary arrays (`L` and `R`) created in the `merge` function.
+
+```
