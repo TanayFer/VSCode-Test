@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        W-Page
+    </title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header{
+            text-align: center;
+            font-weight: bolder;
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="post">
+            <header><u>Student Form</u></header>
+            <p>
+                <b>Name:</b> <input type="text" name="fname" id="info">
+            </p>
+            <p>
+                <b>Role:</b> <input type="text" name="role" id="info">
+            </p>
+            <p>
+                <b>Email:</b><input type="email" required id="info-email">
+            </p>
+            <p>
+                <b>Date:</b> <input type="date" name="date" id="info-date">
+            </p>
+            <p>
+                <b>Gender:</b>
+                    Male<input type="radio" name="Gender" id="info-gender">
+                    Fe-Male<input type="radio" name="Gender" id="info-gender">
+                    LGBTQ+<input type="radio" name="Gender" id="info-gender">
+            </p>
+            <p>
+                <b>Caste</b> <select name="Caste" id="info-caste">
+                    <option value="#">Hindu</option>
+                    <option value="#">Sanatani</option>
+                    <option value="#">No-Caste</option>
+                </select>
+            </p>
+        </form>    
+    </div>
+</body>
+</html>
