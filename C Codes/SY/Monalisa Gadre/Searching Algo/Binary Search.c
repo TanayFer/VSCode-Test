@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 void binarySearch(int arr[], int no, int key) {
     int bottom = 0;
     int top = no - 1;

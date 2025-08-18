@@ -1,13 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-#define MAX_SIZE 10
-
-int stack[MAX_SIZE];
+#define max 10
+int stack[max];
 int top = -1;
-
 void push(int value) {
-    if (top >= MAX_SIZE - 1) {
+    if (top >= max - 1) {
         printf("Stack Overflow: Cannot push element.\n");
     } else {
         top++;
@@ -48,9 +45,8 @@ void display() {
 
 int main() {
     int choice, value;
-
     while (1) {
-        printf("\n--- Stack Menu ---\n");
+        printf("--- Stack Menu ---\n");
         printf("1. Push\n");
         printf("2. Pop\n");
         printf("3. Peek\n");
@@ -81,6 +77,5 @@ int main() {
                 printf("Invalid choice. Please try again.\n");
         }
     }
-
     return 0;
 }
