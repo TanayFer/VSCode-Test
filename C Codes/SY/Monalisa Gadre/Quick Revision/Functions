@@ -109,3 +109,261 @@ void selectionSort(int arr[], int n) {
         arr[i] = temp;
     }
 }
+
+//Queue
+int queue[MAX_SIZE];
+int front = -1; 
+int rear = -1; 
+void enqueue(int value) {
+    if (isFull()) {
+        printf("Queue is Full!! Cannot enqueue %d.\n", value);
+    } else {
+        if (front == -1) { // If the queue was empty, set front to 0
+            front = 0;
+        }
+        rear++;
+        queue[rear] = value;
+        printf("Enqueued: %d\n", value);
+    }
+}
+
+void dequeue() {
+    if (isEmpty()) {
+        printf("Queue is Empty!! Cannot dequeue.\n");
+    } else {
+        printf("Dequeued: %d\n", queue[front]);
+        front++;
+        if (front > rear) { // If the queue becomes empty after dequeue
+            front = -1;
+            rear = -1;
+        }
+    }
+}
+
+void display() {
+    if (isEmpty()) {
+        printf("Queue is Empty.\n");
+    } else {
+        printf("Queue elements: ");
+        for (int i = front; i <= rear; i++) {
+            printf("%d ", queue[i]);
+        }
+        printf("\n");
+    }
+}
+
+//Circular Queue
+int queue[max];
+int f= -1, r= -1;
+int isFull()
+{
+    return (r+1) % max==f;
+}
+
+int isEmp()
+{
+    return f== -1;
+}
+
+void enqueue(int data)
+{
+    if (isFull()) {
+        printf("Queue overflow\n");
+        return;
+    }
+    if (f== -1) {
+        f = 0;
+    }
+    r= (r+1) % max;
+    queue[r]= data;
+    printf("Element %d inserted\n", data);
+}
+
+int dequeue()
+{
+    if (isEmp()) {
+        printf("Queue underflow\n");
+        return -1;
+    }
+    int data= queue[f];
+    if (f== r) {
+        f= r = -1;
+    }
+    else {
+        f= (f+1) % max;
+    }
+    return data;
+}
+
+void display()
+{
+    if (isEmp()) {
+        printf("Queue is empty\n");
+        return;
+    }
+    printf("Queue elements: ");
+    for(int i=f; i<=r; i++){
+    	printf("%d\t",queue[i]);
+	}
+}
+
+//Linked List
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+struct Node* start = NULL;
+
+struct Node* createNode(int data) {
+    struct Node* newNode = (struct Node*) malloc(sizeof(struct Node));
+    newNode->data = data;
+    newNode->next = NULL;
+    return newNode;
+}
+
+void insertAtBeginning(int data) {
+    struct Node* newNode = createNode(data);
+    newNode->next = start;
+    start = newNode;
+    printf("Inserted %d at the beginning.\n", data);
+}
+
+void insertAtEnd(int data) {
+    struct Node* newNode = createNode(data);
+    if (start == NULL) {
+        start = newNode;
+        printf("Inserted %d at the end (list was empty).\n", data);
+        return;
+    }
+    struct Node* temp = start;
+    while (temp->next != NULL)
+        temp = temp->next;
+    temp->next = newNode;
+    printf("Inserted %d at the end.\n", data);
+}
+
+void insertAtPosition(int data, int pos) {
+    if (pos <= 0) {
+        printf("Invalid position.\n");
+        return;
+    }
+
+    if (pos == 1) {
+        insertAtBeginning(data);
+        return;
+    }
+
+    struct Node* newNode = createNode(data);
+    struct Node* temp = start;
+    int count = 1;
+
+    while (temp != NULL && count < pos - 1) {
+        temp = temp->next;
+        count++;
+    }
+
+    if (temp == NULL) {
+        printf("Position %d is out of bounds.\n", pos);
+        free(newNode);
+        return;
+    }
+
+    newNode->next = temp->next;
+    temp->next = newNode;
+    printf("Inserted %d at position %d.\n", data, pos);
+}
+
+void printList() {
+    if (start == NULL) {
+        printf("List is empty.\n");
+        return;
+    }
+    struct Node* temp = start;
+    printf("Linked List: ");
+    while (temp != NULL) {
+        printf("%d -> ", temp->data);
+        temp = temp->next;
+    }
+    printf("NULL\n");
+}
+
+int length() {
+    int count = 0;
+    struct Node* temp = start;
+    while (temp != NULL) {
+        count++;
+        temp = temp->next;
+    }
+    return count;
+}
+
+int search(int key) {
+    struct Node* temp = start;
+    int pos = 1;
+    while (temp != NULL) {
+        if (temp->data == key)
+            return pos;
+        temp = temp->next;
+        pos++;
+    }
+    return -1;
+}
+
+void deleteByKey(int key) {
+    struct Node *temp = start, *prev = NULL;
+
+    if (temp != NULL && temp->data == key) {
+        start = temp->next;
+        free(temp);
+        printf("Node with key %d deleted.\n", key);
+        return;
+    }
+
+    while (temp != NULL && temp->data != key) {
+        prev = temp;
+        temp = temp->next;
+    }
+
+    if (temp == NULL) {
+        printf("Key %d not found.\n", key);
+        return;
+    }
+
+    prev->next = temp->next;
+    free(temp);
+    printf("Node with key %d deleted.\n", key);
+}
+
+void deleteAtPosition(int pos) {
+    if (start == NULL) {
+        printf("List is empty.\n");
+        return;
+    }
+
+    struct Node* temp = start;
+
+    if (pos == 1) {
+        start = temp->next;
+        free(temp);
+        printf("Node at position %d deleted.\n", pos);
+        return;
+    }
+
+    struct Node* prev = NULL;
+    int count = 1;
+    while (temp != NULL && count != pos) {
+        prev = temp;
+        temp = temp->next;
+        count++;
+    }
+
+    if (temp == NULL) {
+        printf("Position %d does not exist.\n", pos);
+        return;
+    }
+
+    prev->next = temp->next;
+    free(temp);
+    printf("Node at position %d deleted.\n", pos);
+}
