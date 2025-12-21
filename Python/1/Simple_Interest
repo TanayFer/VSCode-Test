@@ -1,10 +1,10 @@
 # Simple Interest Calculator
 
-principal = float(input("Enter principal amount: "))
-rate = float(input("Enter rate of interest (per annum): "))
-time = float(input("Enter time period (in years): "))
+principal = float(input("Enter principal amount: "));
+rate = float(input("Enter rate of interest (per annum): "));
+time = float(input("Enter time period (in years): "));
 
-simple_interest = (principal * rate * time) / 100
+simple_interest = (principal * rate * time) / 100;
 
-print(f"Simple Interest: {simple_interest}")
-print(f"Total Amount: {principal + simple_interest}")
+print("Simple Interest: {simple_interest}");
+print("Total Amount: {principal + simple_interest}");
