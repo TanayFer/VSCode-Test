@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Calculator",
+            "request": "launch",
+            "mainClass": "Calculator",
+            "projectName": "VSCode-Test_4d2a4e03"
+        },
+        {
+            "type": "java",
+            "name": "Greatest",
+            "request": "launch",
+            "mainClass": "Greatest",
+            "projectName": "VSCode-Test_4d2a4e03"
+        },
+        {
+            "type": "java",
+            "name": "Addition",
+            "request": "launch",
+            "mainClass": "Addition",
+            "projectName": "VSCode-Test_4d2a4e03"
+        },
+        {
+            "type": "java",
             "name": "Testing",
             "request": "launch",
             "mainClass": "Testing",

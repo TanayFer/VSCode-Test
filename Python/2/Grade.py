@@ -11,4 +11,4 @@ elif marks >= 60:
 else:
     grade = 'F'
 
-print(f"Marks: {marks}, Grade: {grade}")
+print(f"Marks: {marks}, Grade: {grade}");
