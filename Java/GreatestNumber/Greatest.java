@@ -1,3 +1,5 @@
+package GreatestNumber;
+
 public class Greatest {
     public static void main(String[] args) {
         int A = 50; 

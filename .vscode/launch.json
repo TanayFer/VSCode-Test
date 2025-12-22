@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "EvenOdd",
+            "request": "launch",
+            "mainClass": "OddEvenZero.EvenOdd",
+            "projectName": "VSCode-Test_4d2a4e03"
+        },
+        {
+            "type": "java",
+            "name": "EvenOdd",
+            "request": "launch",
+            "mainClass": "EvenOdd",
+            "projectName": "VSCode-Test_4d2a4e03"
+        },
+        {
+            "type": "java",
+            "name": "EvOdZe",
+            "request": "launch",
+            "mainClass": "EvOdZe",
+            "projectName": "VSCode-Test_4d2a4e03"
+        },
+        {
+            "type": "java",
             "name": "Calculator",
             "request": "launch",
             "mainClass": "Calculator",
