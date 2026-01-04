@@ -1,42 +1,13 @@
-A = [10, 5 , 2 , 15 , 21]
+A = {1, 0, 1, 0, 10, 20, 30, 20, 30, 10, 40, 50, 50, 40, True, False};
 print(A);
 
-#Length of List
-print(len(A));
+dict={
+    "Monday":1,
+    "Tuesday":2,
+    "Wed":3,
+    "Monday":10,
+}
+print(dict)
 
-#Sorting List
-A.sort();
-print(A);
-
-#Maksad 2
-B = ["Apple", "Banana", 1.5 , 15];
-print(type(B));
-print(B);
-
-#Tappu
-A1 = ("Anish", 101)
-print(A1)     
-
-print(len(A1))     
-
-#Type Conversion(To List)
-A2 = list(A1);
-print(A2);
-
-#Type Conversion(To Tuple)
-A3 = tuple(A2);
-print(A3);
-
-C = [10, 5 , 2 , 15 , 21, 99, 25 , 578, 697, 645 , 5747]
-D = (102,54,587,549,588712,65,357125,356569,51,120,237,7)
-
-print(C);
-print(D);
-print("-------------------------");
-print(C[2:5]);
-print(C[ :5]);
-print(C[2: ]);
-print("-------------------------");
-print(C[2:-5]);
-print(C[ :-5]);
-print(C[-2: ]);
+""""Hmmmmmmmmmmmmmmmmmmmmm"""
+#Hmmmmmmmmmmmmmmmmmmmmmm
