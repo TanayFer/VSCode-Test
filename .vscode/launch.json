@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Student",
+            "request": "launch",
+            "mainClass": "Student",
+            "projectName": "VSCode-Test_4d2a4e03"
+        },
+        {
+            "type": "java",
             "name": "EvenOdd",
             "request": "launch",
             "mainClass": "OddEvenZero.EvenOdd",
