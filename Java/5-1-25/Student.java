@@ -2,7 +2,6 @@ public class Student {
     int rollNo;
     String name;
 
-    // Default constructor (required to use "new Student()")
     public Student() {}
 
     public void displayDetails() {

@@ -9,6 +9,13 @@ dict={
 }
 print(dict)
 
+list1 = []
+for i in range(1, 6):
+    list1.append(input())
+
+Tup1 = tuple(list1)
+print(Tup1)
+
 """Hmmmmmmmmmmmmm
 mmmmmmmmmmmmmm
 mmmmmmmmmm
