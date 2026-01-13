@@ -32,16 +32,28 @@ n=100000
 coin5 = sample(c("H","T"), n , replace = T)
 dice = numeric(n)
 for (i in 1:n) {
-  if (coin[i]=="H") {
+  if (coin5[i]=="H") {
     sum[i]=sample(1:6, 1, replace = T)
   }else{
-    sum[i]=sample(1:6, 2, replace = T)
+    sum[i]=sum(sample(1:6, 2, replace = T))
   }
 }
 sum
-mean(sum>8)
+prob5 = mean(sum>8)
 
+#Q6
+n=40
+count=0
 
+for (i in 1:10000) {
+  bday=sample(1:365, n, replace = TRUE)
+  freq=table(bday)               
+  if (any(freq >= 3)) {            
+    count=count + 1
+  }
+}
+prob=count / 10000
+prob
 
 
 

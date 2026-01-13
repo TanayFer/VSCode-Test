@@ -12,7 +12,6 @@ prob=mean(Sum == 7)
 
 #Q8
 n = 10000
-
 dim(bday)
 count = 0;
 for (i in 1:10000) {
