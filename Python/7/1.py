@@ -2,9 +2,9 @@
 student = {
     "name": "Ashish Deshpande",
     "student_id": "001",
-    "age": 69,
+    "age": 59,
     "major": "Computer Science",
-    "gpa": 3.8,
+    "gpa": 7.8,
     "courses": "Python"
 }
 

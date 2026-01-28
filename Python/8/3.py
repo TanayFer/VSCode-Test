@@ -1,5 +1,5 @@
 #Unique ELements in Word
-a = set('Apple,Pineapple')
+a = set(input())
 print(a)
 
 #Unique ELements in List

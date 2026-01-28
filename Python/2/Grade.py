@@ -1,4 +1,4 @@
-marks = 85
+marks = int(input('Enter Your Grade: '))
 
 if marks >= 90:
     grade = 'A'

@@ -15,3 +15,14 @@ C = C+D;
 D = C-D;
 C = C-D;
 print(C,"_____",D);
+
+#Another +1 Method 
+A1 = int(input('Enter Int A: '));
+B1 = int(input('Enter Int A: '));
+print(A1)
+print(B1)
+
+A1, B1 = B1, A1
+print("After Swapping");
+print(A1)
+print(B1)

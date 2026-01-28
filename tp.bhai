@@ -1,0 +1,8 @@
+hi bhai;
+    bol bhai("Anish");
+    bol bhai("Mujumdar");
+    bhai ye hai a = 10;
+    agar bhai (a == 10) {
+        bol bhai ("Anish is Gay");
+    }
+bye bhai

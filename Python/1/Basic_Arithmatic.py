@@ -1,6 +1,6 @@
 print("Tesing Installation");
-A = 10;
-B = 15;
+A = int(input('Enter Int A: '));
+B = int(input('Enter Int B: '));
 print("A + B=",A+B);
 print("A - B=",A-B);
 print("A * B=",A*B);
