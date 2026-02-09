@@ -83,10 +83,11 @@ Die1 = sample(1:6, A, replace = TRUE)
 Die2 = sample(1:6, A, replace = TRUE)
 Die3 = sample(1:6, A, replace = TRUE)
 
-D14 = data.frame(Die1,Die2,Die3)
-D14$least5 = rowsum(D14)
-prob_estimate = mean(D14$least5 >= 5)
+D14 = data.frame(Die1, Die2, Die3)
+D14$total_sum = rowSums(D14)
+prob_estimate = mean(D14$total_sum >= 5)
 
+print(paste("Estimated Probability:", prob_estimate))
 
 
 

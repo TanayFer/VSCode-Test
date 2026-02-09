@@ -42,6 +42,7 @@ public class Student {
         totalMarks = sc.nextInt();
         System.out.print("Enter obtained marks: ");
         obtainedMarks = sc.nextInt();
+        sc.close();
     }
 
     public static void main(String[] args) {
