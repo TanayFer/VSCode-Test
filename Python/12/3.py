@@ -29,6 +29,7 @@ def is_prime(n):
 def is_armstrong(n):
 	
 
+
 print("===============Menu===============")
 print("1 : Factorial")
 print("2 : Prime Check")
