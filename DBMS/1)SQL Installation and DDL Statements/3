@@ -1,0 +1,15 @@
+CREATE TABLE MEMBER(
+MemberID INT PRIMARY KEY,
+Name VARCHAR(50) NOT NULL,
+Phone INT(10) Unique,
+Address VARCHAR(50)
+);
+
+CREATE TABLE BOOK (
+    BookID INT PRIMARY KEY,
+    Title VARCHAR(50),
+    Author VARCHAR(50),
+    Price INT CHECK (Price > 0 AND Price < 1000),
+    MemberID INT(50),
+    FOREIGN KEY (MemberID) REFERENCES MEMBER(MemberID)
+);

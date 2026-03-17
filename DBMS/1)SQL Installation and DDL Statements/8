@@ -1,0 +1,29 @@
+CREATE TABLE DOCTOR (
+    DoctorID INT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Specialization VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE PATIENT (
+    PatientID INT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Age INT NOT NULL
+);
+
+CREATE TABLE APPOINTMENT (
+    AppointmentID INT PRIMARY KEY,
+    Date DATE NOT NULL,
+    DoctorID INT,
+    PatientID INT,
+    Status VARCHAR(20) DEFAULT 'Scheduled',
+    FOREIGN KEY (DoctorID) REFERENCES DOCTOR(DoctorID),
+    FOREIGN KEY (PatientID) REFERENCES PATIENT(PatientID)
+);
+
+CREATE TABLE BILL (
+    BillID INT PRIMARY KEY,
+    Amount DECIMAL(10, 2) NOT NULL CHECK (Amount >= 0),
+    AppointmentID INT UNIQUE,
+    PaymentMode VARCHAR(50) NOT NULL,
+    FOREIGN KEY (AppointmentID) REFERENCES APPOINTMENT(AppointmentID)
+);

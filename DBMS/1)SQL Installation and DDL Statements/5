@@ -1,0 +1,31 @@
+CREATE TABLE CUSTOMER (
+    CustomerID INT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) UNIQUE NOT NULL,
+    City VARCHAR(50)
+);
+
+CREATE TABLE BRANCH (
+    BranchID INT PRIMARY KEY,
+    BranchName VARCHAR(100) NOT NULL,
+    City VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE ACCOUNT (
+    AccountNo INT PRIMARY KEY,
+    AccountType VARCHAR(20),
+    Balance DECIMAL(15, 2) CHECK (Balance >= 0),
+    Status VARCHAR(20) DEFAULT 'Active',
+    CustomerID INT,
+    BranchID INT,
+    FOREIGN KEY (CustomerID) REFERENCES CUSTOMER(CustomerID),
+    FOREIGN KEY (BranchID) REFERENCES BRANCH(BranchID)
+);
+
+CREATE TABLE TRANSACTION (
+    TransID INT PRIMARY KEY,
+    TransDate DATE NOT NULL,
+    Amount DECIMAL(15, 2) CHECK (Amount > 0),
+    AccountNo INT,
+    FOREIGN KEY (AccountNo) REFERENCES ACCOUNT(AccountNo)
+);

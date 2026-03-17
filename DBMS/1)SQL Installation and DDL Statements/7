@@ -1,0 +1,30 @@
+CREATE TABLE USER (
+    UserID INT PRIMARY KEY,
+    UserName VARCHAR(100) NOT NULL,
+    Email VARCHAR(150) UNIQUE,
+    RegistrationDate DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE PRODUCT (
+    ProductID INT PRIMARY KEY,
+    ProductName VARCHAR(255) NOT NULL,
+    Price DECIMAL(10, 2) NOT NULL CHECK (Price >= 0),
+    Stock INT NOT NULL CHECK (Stock >= 0)
+);
+
+CREATE TABLE ORDER (
+    OrderID INT PRIMARY KEY,
+    OrderDate DATE NOT NULL,
+    UserID INT,
+    Status VARCHAR(20) DEFAULT 'Pending',
+    FOREIGN KEY (UserID) REFERENCES USER(UserID)
+);
+
+CREATE TABLE ORDER_ITEM (
+    OrderID INT,
+    ProductID INT,
+    Quantity INT CHECK (Quantity > 0),
+    PRIMARY KEY (OrderID, ProductID),
+    FOREIGN KEY (OrderID) REFERENCES ORDER(OrderID),
+    FOREIGN KEY (ProductID) REFERENCES PRODUCT(ProductID)
+);
