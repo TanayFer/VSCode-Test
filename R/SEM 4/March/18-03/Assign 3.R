@@ -1,4 +1,4 @@
-#-----------------------------Assign 3-----------------------------
+#-----------------------------Practical 3-----------------------------
 #============Q1============
 n1 = 10000;
 X1 = sample(1:6, n1, replace = T)
@@ -58,13 +58,70 @@ pmf = table(X) / n5
 print("Estimated p.m.f.")
 print(pmf)
 
-cdf = cumsum(X)
+cdf = cumsum(pmf)
 
-plot(cdf, 
+plot(cdf,
+     type = "s",
      main = "Empirical c.d.f. of X", 
-     xlab = "Outcome (0=Black, 1=Red)", 
-     ylab = "Cumulative Probability",
-     col = "blue",
-     verticals = TRUE,
-     do.points = TRUE)
+     xlab = "Outcome", 
+     ylab = "Cumulative Probability")
+
+#============Q6============
+n6 = 10000;
+X6_1 = sample(c(1:6), n6, replace = T)
+X6_2 = sample(c(1:6), n6, replace = T)
+X6 = data.frame(X6_1,X6_2)
+X6$Sum = rowSums(X6);
+
+pmf_6 = table(X6$Sum) / n6 ; pmf_6
+cdf_6 = cumsum(pmf_6) ; cdf_6
+Plot6 = plot(cdf_6,
+             type = "s",
+             main = "Cumsum", 
+             xlab = "Outcome", 
+             ylab = "Cumulative Probability")
+
+#============Q7============
+n7 = 10000
+X7 = sample(1:10, n7, replace = TRUE)
+
+X = ifelse(X7 %% 3 == 0, 1, 0)
+
+pmf = table(X) / n7
+
+print("Estimated p.m.f. for X (1 = Divisible by 3, 0 = Otherwise):")
+print(pmf)
+
+#============Q8============
+n8 = 15000
+X8_1 = sample(c("H","T"), n8, replace = T)
+X8_2 = sample(c("H","T"), n8, replace = T)
+X8_3 = sample(c("H","T"), n8, replace = T)
+X8 = data.frame(X8_1,X8_2,X8_3)
+X8$X = rowSums(X8 == "T")
+
+pmf_8 = table(X8$X) / n8 ; pmf_8
+cdf_8 = cumsum(pmf_8) ; cdf_8
+Plot8 = plot(cdf_8,
+             type = "s",
+             main = "Cumsum", 
+             xlab = "Outcome", 
+             ylab = "Cumulative Probability")
+
+#============Q9============
+n = 12000
+rolls = sample(1:6, n, replace = TRUE)
+
+X = ifelse(rolls <= 2, 0, 
+           ifelse(rolls == 3 | rolls == 4, 1, 2))
+
+pmf = table(X) / n
+print(pmf)
+
+cdf = cumsum(pmf)
+plot(cdf, 
+     type = "s",
+     main = "Empirical c.d.f. of X", 
+     xlab = "x", 
+     ylab = "F(x)")
 
