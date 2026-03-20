@@ -17,7 +17,7 @@ for char in s:
         else:
             cons += 1
 
-print(f"Vowels: {vowels}")
+print("Vowels: ", vowels)
 print(f"Consonants: {cons}")
 print(f"Digits: {digits}")
 print(f"Spaces: {spaces}") 
