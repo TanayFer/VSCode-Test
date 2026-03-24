@@ -1,0 +1,45 @@
+CREATE TABLE DOCTOR (
+    DoctorID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Specialization VARCHAR(100)
+);
+
+CREATE TABLE PATIENT (
+    PatientID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Age INT
+);
+
+CREATE TABLE APPOINTMENT (
+    AppointmentID INT PRIMARY KEY,
+    Date DATE,
+    Status VARCHAR(20) DEFAULT 'Scheduled',
+    DoctorID INT,
+    PatientID INT,
+    FOREIGN KEY (DoctorID) REFERENCES DOCTOR(DoctorID),
+    FOREIGN KEY (PatientID) REFERENCES PATIENT(PatientID)
+);
+
+INSERT INTO DOCTOR (DoctorID, Name, Specialization) VALUES 
+(1, 'Dr. Deshmukh', 'Cardiology'),
+(2, 'Dr. Smith', 'Neurology');
+
+INSERT INTO PATIENT (PatientID, Name, Age) VALUES 
+(101, 'Kilo Bytes', 45),
+(102, 'Aero Dynamics', 30);
+
+INSERT INTO APPOINTMENT (AppointmentID, Date, Status, DoctorID, PatientID) VALUES 
+(501, '2026-03-25', 'Confirmed', 1, 101),
+(502, '2026-03-26', 'Scheduled', 2, 102),
+(503, '2026-03-27', 'Scheduled', 1, 102);
+
+UPDATE DOCTOR 
+SET Specialization = 'Interventional Cardiology' 
+WHERE DoctorID = 1;
+
+UPDATE APPOINTMENT 
+SET Status = 'Completed' 
+WHERE AppointmentID = 501;
+
+DELETE FROM APPOINTMENT 
+WHERE AppointmentID = 503;

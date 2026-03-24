@@ -1,0 +1,59 @@
+CREATE TABLE USER (
+    UserID INT PRIMARY KEY,
+    UserName VARCHAR(100),
+    Email VARCHAR(100)
+);
+
+CREATE TABLE PRODUCT (
+    ProductID INT PRIMARY KEY,
+    ProductName VARCHAR(100),
+    Price DECIMAL(10, 2)
+);
+
+CREATE TABLE ORDERS (
+    OrderID INT PRIMARY KEY,
+    OrderDate DATE,
+    UserID INT,
+    FOREIGN KEY (UserID) REFERENCES USER(UserID)
+);
+
+CREATE TABLE ORDER_ITEM (
+    OrderID INT,
+    ProductID INT,
+    Quantity INT,
+    PRIMARY KEY (OrderID, ProductID),
+    FOREIGN KEY (OrderID) REFERENCES ORDERS(OrderID) ON DELETE CASCADE,
+    FOREIGN KEY (ProductID) REFERENCES PRODUCT(ProductID) ON DELETE CASCADE
+);
+
+INSERT INTO USER (UserID, UserName, Email) VALUES 
+(1, 'Aditya Pawar', 'aditya.p@despu.edu'),
+(2, 'Neha Kulkarni', 'neha.k@despu.edu');
+
+INSERT INTO PRODUCT (ProductID, ProductName, Price) VALUES 
+(101, 'Laptop', 75000.00),
+(102, 'Wireless Mouse', 1500.00),
+(103, 'USB-C Cable', 800.00);
+
+INSERT INTO ORDERS (OrderID, OrderDate, UserID) VALUES 
+(5001, '2026-03-24', 1),
+(5002, '2026-03-24', 2);
+
+INSERT INTO ORDER_ITEM (OrderID, ProductID, Quantity) VALUES 
+(5001, 101, 1),
+(5001, 102, 2),
+(5002, 103, 5);
+
+UPDATE ORDER_ITEM 
+SET Quantity = 3 
+WHERE OrderID = 5001 AND ProductID = 102;
+
+UPDATE PRODUCT 
+SET Price = 72000
+WHERE ProductID = 101;
+
+DELETE FROM ORDERS 
+WHERE OrderID = 5001;
+
+DELETE FROM PRODUCT 
+WHERE ProductID = 103;

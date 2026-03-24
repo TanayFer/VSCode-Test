@@ -1,0 +1,40 @@
+CREATE TABLE STUDENT (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Department VARCHAR(50)
+);
+
+CREATE TABLE COURSE (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(100),
+    StudentID INT,
+    FOREIGN KEY (StudentID) REFERENCES STUDENT(StudentID) ON DELETE CASCADE
+);
+
+INSERT INTO STUDENT (StudentID, Name, Department) VALUES 
+(1, 'Amit Sharma', 'Computer Science'),
+(2, 'Sana Khan', 'Mathematics'),
+(3, 'Rahul Patil', 'Physics');
+
+INSERT INTO COURSE (CourseID, CourseName, StudentID) VALUES 
+(101, 'Data Structures', 1),
+(102, 'Database Systems', 1),
+(103, 'Calculus', 2),
+(104, 'Quantum Mechanics', 3);
+
+UPDATE STUDENT 
+SET Department = 'Data Science' 
+WHERE StudentID = 1;
+
+UPDATE COURSE 
+SET CourseName = 'Advanced Calculus' 
+WHERE StudentID = 2 AND CourseID = 103;
+
+DELETE FROM COURSE 
+WHERE CourseID = 102 AND StudentID = 1;
+
+DELETE FROM STUDENT 
+WHERE StudentID = 3;
+
+SELECT * FROM STUDENT;
+SELECT * FROM COURSE;

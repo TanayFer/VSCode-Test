@@ -1,0 +1,48 @@
+CREATE TABLE STUDENT (
+    RollNo INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Semester INT
+);
+
+CREATE TABLE COURSE (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(100),
+    Credits INT
+);
+
+CREATE TABLE ENROLLMENT (
+    RollNo INT,
+    CourseID INT,
+    EnrollDate DATE,
+    Grade CHAR(2),
+    PRIMARY KEY (RollNo, CourseID),
+    FOREIGN KEY (RollNo) REFERENCES STUDENT(RollNo) ON DELETE CASCADE,
+    FOREIGN KEY (CourseID) REFERENCES COURSE(CourseID) ON DELETE CASCADE
+);
+
+INSERT INTO STUDENT (RollNo, Name, Semester) VALUES 
+(101, 'Aditya Pawar', 4),
+(102, 'Snehal Kulkarni', 4),
+(103, 'Rahul Deshmukh', 2);
+
+INSERT INTO COURSE (CourseID, CourseName, Credits) VALUES 
+(1, 'Database Management Systems', 4),
+(2, 'Data Structures', 3),
+(3, 'Discrete Mathematics', 4);
+
+INSERT INTO ENROLLMENT (RollNo, CourseID, EnrollDate, Grade) VALUES 
+(101, 1, '2026-01-15', 'A'),
+(101, 2, '2026-01-15', 'B+'),
+(102, 1, '2026-01-16', 'A'),
+(103, 3, '2026-01-20', 'B');
+
+UPDATE STUDENT 
+SET Semester = 5 
+WHERE RollNo = 101;
+
+UPDATE ENROLLMENT 
+SET Grade = 'A+' 
+WHERE RollNo = 102 AND CourseID = 1;
+
+DELETE FROM ENROLLMENT 
+WHERE RollNo = 103 AND CourseID = 3;

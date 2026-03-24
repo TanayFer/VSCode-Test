@@ -1,0 +1,57 @@
+CREATE TABLE DEPARTMENT (
+    DeptID INT PRIMARY KEY,
+    DeptName VARCHAR(100)
+);
+
+CREATE TABLE EMPLOYEE (
+    EmpID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Designation VARCHAR(50)
+);
+
+CREATE TABLE PROJECT (
+    ProjectID INT PRIMARY KEY,
+    ProjectName VARCHAR(100),
+    DeptID INT,
+    FOREIGN KEY (DeptID) REFERENCES DEPARTMENT(DeptID)
+);
+
+CREATE TABLE WORKS_ON (
+    EmpID INT,
+    ProjectID INT,
+    Hours INT,
+    PRIMARY KEY (EmpID, ProjectID),
+    FOREIGN KEY (EmpID) REFERENCES EMPLOYEE(EmpID) ON DELETE CASCADE,
+    FOREIGN KEY (ProjectID) REFERENCES PROJECT(ProjectID) ON DELETE CASCADE
+);
+
+INSERT INTO DEPARTMENT (DeptID, DeptName) VALUES 
+(10, 'IT Services'),
+(20, 'Research & Development');
+
+INSERT INTO EMPLOYEE (EmpID, Name, Designation) VALUES 
+(101, 'Anjali Kulkarni', 'Senior Developer'),
+(102, 'Vikram Singh', 'Project Manager');
+
+INSERT INTO PROJECT (ProjectID, ProjectName, DeptID) VALUES 
+(501, 'Cloud Migration', 10),
+(502, 'AI Chatbot', 20);
+
+INSERT INTO WORKS_ON (EmpID, ProjectID, Hours) VALUES 
+(101, 501, 40),
+(101, 502, 20),
+(102, 502, 35);
+
+UPDATE WORKS_ON 
+SET Hours = 45 
+WHERE EmpID = 101 AND ProjectID = 501;
+
+UPDATE PROJECT 
+SET ProjectName = 'Enterprise AI Bot' 
+WHERE ProjectID = 502;
+
+DELETE FROM WORKS_ON 
+WHERE EmpID = 102 AND ProjectID = 502;
+
+DELETE FROM PROJECT 
+WHERE ProjectID = 501;

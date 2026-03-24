@@ -1,0 +1,48 @@
+CREATE TABLE CUSTOMER (
+    CustomerID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    City VARCHAR(50)
+);
+
+CREATE TABLE ACCOUNT (
+    AccountNo INT PRIMARY KEY,
+    AccountType VARCHAR(50),
+    Balance DECIMAL(15, 2),
+    CustomerID INT,
+    FOREIGN KEY (CustomerID) REFERENCES CUSTOMER(CustomerID)
+);
+
+CREATE TABLE TRANSACTION (
+    TransID INT PRIMARY KEY,
+    TransDate DATE,
+    Amount DECIMAL(15, 2),
+    AccountNo INT,
+    FOREIGN KEY (AccountNo) REFERENCES ACCOUNT(AccountNo) ON DELETE CASCADE
+);
+
+INSERT INTO CUSTOMER (CustomerID, Name, City) VALUES 
+(1, 'Rahul Verma', 'Pune'),
+(2, 'Sonal Shah', 'Mumbai');
+
+INSERT INTO ACCOUNT (AccountNo, AccountType, Balance, CustomerID) VALUES 
+(1001, 'Savings', 5000.00, 1),
+(1002, 'Current', 12000.00, 1),
+(1003, 'Savings', 3000.00, 2);
+
+INSERT INTO TRANSACTION (TransID, TransDate, Amount, AccountNo) VALUES 
+(501, '2026-03-20', 500.00, 1001),
+(502, '2026-03-21', 2000.00, 1002);
+
+UPDATE ACCOUNT 
+SET Balance = Balance + 500.00 
+WHERE AccountNo = 1001;
+
+UPDATE ACCOUNT 
+SET AccountType = 'Premium Savings' 
+WHERE Balance > 10000;
+
+DELETE FROM TRANSACTION 
+WHERE TransID = 501;
+
+DELETE FROM ACCOUNT 
+WHERE AccountNo = 1002;

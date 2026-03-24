@@ -1,0 +1,37 @@
+CREATE TABLE DEPARTMENT (
+    DeptID INT PRIMARY KEY,
+    DeptName VARCHAR(50)
+);
+
+CREATE TABLE EMPLOYEE (
+    EmpID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Salary DECIMAL(10, 2),
+    DeptID INT,
+    FOREIGN KEY (DeptID) REFERENCES DEPARTMENT(DeptID)
+);
+
+INSERT INTO DEPARTMENT (DeptID, DeptName) VALUES 
+(10, 'Human Resources'),
+(20, 'Engineering'),
+(30, 'Marketing');
+
+INSERT INTO EMPLOYEE (EmpID, Name, Salary, DeptID) VALUES 
+(101, 'Aditi Rao', 55000, 10),
+(102, 'Karan Malhotra', 85000, 20),
+(103, 'Sneha Patil', 60000, 20),
+(104, 'Vijay Varma', 45000, 30);
+
+UPDATE EMPLOYEE 
+SET Salary = Salary + 5000 
+WHERE EmpID = 102 AND DeptID = 20;
+
+UPDATE EMPLOYEE 
+SET DeptID = 30 
+WHERE EmpID = 101;
+
+DELETE FROM EMPLOYEE 
+WHERE EmpID = 104;
+
+DELETE FROM DEPARTMENT 
+WHERE DeptID = 20;
