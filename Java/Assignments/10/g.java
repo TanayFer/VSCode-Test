@@ -15,3 +15,13 @@ class Dropbox extends CloudService {
         System.out.println("Uploading " + name + " to Dropbox");
     }
 }
+
+public class g {
+    public static void main(String[] args) {
+        CloudService googleDrive = new GoogleDrive();
+        CloudService dropbox = new Dropbox();
+
+        googleDrive.uploadFile("assignment.pdf");
+        dropbox.uploadFile("notes.txt");
+    }
+}

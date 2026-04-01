@@ -15,3 +15,13 @@ class DoorAlarm implements Alarm {
         System.out.println("Door alarm ringing: BEEP BEEP BEEP");
     }
 }
+
+public class d {
+    public static void main(String[] args) {
+        Alarm fire = new FireAlarm();
+        Alarm door = new DoorAlarm();
+
+        fire.ring();
+        door.ring();
+    }
+}

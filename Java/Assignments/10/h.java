@@ -15,3 +15,13 @@ class WeldingRobot extends Robot {
         System.out.println("Welding the metal...");
     }
 }
+
+public class h {
+    public static void main(String[] args) {
+        Robot cleaner = new CleaningRobot();
+        Robot welder = new WeldingRobot();
+
+        cleaner.performTask();
+        welder.performTask();
+    }
+}

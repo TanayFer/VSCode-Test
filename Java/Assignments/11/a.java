@@ -4,8 +4,8 @@ interface Shape {
 }
 
 class Rectangle implements Shape {
-    private double width;
-    private double height;
+    private final double width;
+    private final double height;
     
     public Rectangle(double width, double height) {
         this.width = width;
@@ -24,7 +24,7 @@ class Rectangle implements Shape {
 }
 
 class Circle implements Shape {
-    private double radius;
+    private final double radius;
     
     public Circle(double radius) {
         this.radius = radius;
@@ -38,5 +38,17 @@ class Circle implements Shape {
     @Override
     public double perimeter() {
         return 2 * Math.PI * radius;
+    }
+}
+
+public class a {
+    public static void main(String[] args) {
+        Shape rectangle = new Rectangle(10, 5);
+        Shape circle = new Circle(7);
+
+        System.out.println("Rectangle Area: " + rectangle.area());
+        System.out.println("Rectangle Perimeter: " + rectangle.perimeter());
+        System.out.println("Circle Area: " + circle.area());
+        System.out.println("Circle Perimeter: " + circle.perimeter());
     }
 }

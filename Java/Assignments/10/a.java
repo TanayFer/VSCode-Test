@@ -15,3 +15,13 @@ class Audio extends MediaFile {
         System.out.println("Playing audio...");
     }
 }
+
+public class a {
+    public static void main(String[] args) {
+        MediaFile video = new Video();
+        MediaFile audio = new Audio();
+
+        video.play();
+        audio.play();
+    }
+}

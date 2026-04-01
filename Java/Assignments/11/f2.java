@@ -1,8 +1,0 @@
-package p2;
-
-public class Test {
-    public static void main(String[] args) {
-        Tool tool = new Tool();
-        tool.use();
-    }
-}

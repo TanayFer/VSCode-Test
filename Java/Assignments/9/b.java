@@ -4,10 +4,18 @@ class Animal {
     }
 }
 
-class Dog extends Animal {
+public class b extends Animal {
     @Override
     public void sound() {
         super.sound();
         System.out.println("Dog barks");
+    }
+
+    public static void main(String[] args) {
+        Animal animal = new Animal();
+        b dog = new b();
+
+        animal.sound();
+        dog.sound();
     }
 }

@@ -2,7 +2,7 @@
 // Use getters and setters to update and display car details.
 import java.util.Scanner;
 
-class c {
+class Car {
     private String make;
     private String model;
     private int speed;
@@ -40,7 +40,7 @@ class c {
 
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
-            c car = new c();
+            Car car = new Car();
 
             System.out.print("Enter car make: ");
             car.setMake(sc.nextLine());

@@ -1,10 +1,10 @@
 import java.util.Scanner;
-public class a {
+public class Teacher {
     public String name;
     public String subject;
     public int experienceYears;
 
-    public a(String name, String subject, int experienceYears) {
+    public Teacher(String name, String subject, int experienceYears) {
         this.name = name;
         this.subject = subject;
         this.experienceYears = experienceYears;
@@ -38,7 +38,7 @@ public class a {
         System.out.print("Enter experience years: ");
         int experienceYears = scanner.nextInt();
 
-        a teacher = new a(name, subject, experienceYears);
+        Teacher teacher = new Teacher(name, subject, experienceYears);
 
         System.out.println("Name: " + teacher.getName());
         System.out.println("Subject: " + teacher.getSubject());

@@ -3,10 +3,17 @@ class Vehicle {
 }
 
 class Car extends Vehicle {
-    int speed = 100;
+    int childSpeed = 100;
     
     void printSpeed() {
         System.out.println("Parent speed: " + super.speed);
-        System.out.println("Child speed: " + this.speed);
+        System.out.println("Child speed: " + this.childSpeed);
+    }
+}
+
+public class d {
+    public static void main(String[] args) {
+        Car car = new Car();
+        car.printSpeed();
     }
 }

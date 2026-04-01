@@ -15,3 +15,13 @@ class Robot implements Movable {
         System.out.println("Robot is walking");
     }
 }
+
+public class b {
+    public static void main(String[] args) {
+        Movable car = new Car();
+        Movable robot = new Robot();
+
+        car.move();
+        robot.move();
+    }
+}

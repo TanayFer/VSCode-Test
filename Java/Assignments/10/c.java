@@ -36,3 +36,16 @@ class Mage extends GameCharacter {
         System.out.println(name + " casts a fireball spell!");
     }
 }
+
+public class c {
+    public static void main(String[] args) {
+        Warrior warrior = new Warrior("Aragorn", 120);
+        Mage mage = new Mage("Gandalf", 90);
+
+        warrior.attack();
+        warrior.takeDamage(25);
+
+        mage.attack();
+        mage.takeDamage(30);
+    }
+}

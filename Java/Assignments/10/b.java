@@ -15,3 +15,13 @@ class SMSNotification extends Notification {
         System.out.println("Sending SMS notification...");
     }
 }
+
+public class b {
+    public static void main(String[] args) {
+        Notification email = new EmailNotification();
+        Notification sms = new SMSNotification();
+
+        email.sendMessage();
+        sms.sendMessage();
+    }
+}

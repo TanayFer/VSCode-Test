@@ -2,13 +2,13 @@
 
 import java.util.Scanner;
 
-public class b {
+public class Flight {
     public int flightNumber;
     public String origin;
     public String destination;
     public double duration;
 
-    public b(int flightNumber, String origin, String destination, double duration) {
+    public Flight(int flightNumber, String origin, String destination, double duration) {
         this.flightNumber = flightNumber;
         this.origin = origin;
         this.destination = destination;
@@ -38,7 +38,7 @@ public class b {
         System.out.print("Enter duration in hours: ");
         double duration = scanner.nextDouble();
 
-        b flight = new b(flightNumber, origin, destination, duration);
+        Flight flight = new Flight(flightNumber, origin, destination, duration);
 
         System.out.println("\nFlight Details:");
         flight.displayDetails();

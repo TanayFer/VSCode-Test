@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class a {
+public class Student {
     private String name;
     private double marks;
 
@@ -24,27 +24,26 @@ public class a {
         this.marks = marks;
     }
 
-    // Display a details
+    // Display Student details
     public void displayDetails() {
         System.out.println("Student Name: " + name);
         System.out.println("Student Marks: " + marks);
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        a a = new a();
+        try (Scanner scanner = new Scanner(System.in)) {
+            Student student = new Student();
 
-        // Take dynamic input
-        System.out.print("Enter a name: ");
-        a.setName(scanner.nextLine());
+            // Take dynamic input
+            System.out.print("Enter Student name: ");
+            student.setName(scanner.nextLine());
 
-        System.out.print("Enter a marks: ");
-        a.setMarks(scanner.nextDouble());
+            System.out.print("Enter Student marks: ");
+            student.setMarks(scanner.nextDouble());
 
-        // Display details
-        System.out.println("\n--- a Details ---");
-        a.displayDetails();
-
-        scanner.close();
+            // Display details
+            System.out.println("\n--- Student Details ---");
+            student.displayDetails();
+        }
     }
 }

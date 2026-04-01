@@ -18,3 +18,13 @@ class BarcodeScanner implements ScannerDevice {
         System.out.println("Scanning barcode...");
     }
 }
+
+public class c {
+    public static void main(String[] args) {
+        ScannerDevice documentScanner = new DocumentScanner();
+        ScannerDevice barcodeScanner = new BarcodeScanner();
+
+        documentScanner.scan();
+        barcodeScanner.scan();
+    }
+}

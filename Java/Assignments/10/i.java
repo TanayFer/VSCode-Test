@@ -15,3 +15,13 @@ class PepperoniPizza extends Pizza {
         System.out.println("Adding pepperoni slices");
     }
 }
+
+public class i {
+    public static void main(String[] args) {
+        Pizza veggie = new VeggiePizza();
+        Pizza pepperoni = new PepperoniPizza();
+
+        veggie.addToppings();
+        pepperoni.addToppings();
+    }
+}
