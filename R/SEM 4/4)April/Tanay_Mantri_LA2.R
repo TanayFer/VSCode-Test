@@ -74,3 +74,4 @@ VarX = EXsq - EX^2
 sq7 = sqrt(VarX)
 
 M7; EX; EXsq; VarX; sq7
+

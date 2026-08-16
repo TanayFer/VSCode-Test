@@ -2,16 +2,16 @@
 
 #Q1.Probability of Getting Heads from 1000 Fair Coin Toss
 n=1000
-heads=sample(c("H","T"),n,replace=TRUE);heads
+heads=sample(c("H","T"),n,replace=TRUE);
 prob=mean(heads=="H");prob
 
 #Q2.Probability of Getting Heads from 1000 Fair Coin Toss
-tails=sample(c("H","T"),n,replace=TRUE);tails
+tails=sample(c("H","T"),n,replace=TRUE);
 prob1=mean(heads=="T");prob1
 
 #Q2.1Probability of Getting Odd No. from 6000 Fair Dice Rolls
 n1=6000
-dice=sample(c(1,2,3,4,5,6),n1,replace=TRUE);dice
+dice=sample(c(1,2,3,4,5,6),n1,replace=TRUE);
 prob2=mean(dice%%2==1);prob2
 
 #Q2.2Probability of Getting Even No. from 6000 Fair Dice Rolls

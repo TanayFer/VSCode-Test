@@ -8,6 +8,8 @@ B1 = 60
 A1_B1 = 40
 Prob_estiA1 = A1_B1 / B1
 Prob_estiB1 = A1_B1 / A1
+Prob_estiA1
+Prob_estiB1
 
 #------------------Q2------------------
 # A : People Using Internet
@@ -18,6 +20,8 @@ B2 = 90
 A2_B2 = 50
 Prob_estiA2 = A2_B2 / B2
 Prob_estiB2 = A2_B2 / A2
+Prob_estiA2
+Prob_estiB2
 
 #------------------Q3------------------
 n = 10000
@@ -25,7 +29,6 @@ n = 10000
 # B : No > 4
 # A both B : No is in Both
 A3 = sample(c(1:6), n, replace = T)
-A3
 Even3 = 0
 Mul4 = 0
 Both3 = 0
@@ -89,9 +92,9 @@ P_Good=0.94
 P_Fail_Defective=0.70
 P_Fail_Good=0.05
 
-P_Failed_Inspection=(P_Fail_Given_Defective * P_Defective) + (P_Fail_Given_Good * P_Good)
+P_Failed_Inspection=(P_Fail_Defective * P_Defective) + (P_Fail_Good * P_Good)
 
-P_Defective_Given_Failed=(P_Fail_Given_Defective * P_Defective) / P_Failed_Inspection
+P_Defective_Given_Failed=(P_Fail_Defective * P_Defective) / P_Failed_Inspection
 
 print(P_Defective_Given_Failed)
 
@@ -105,6 +108,8 @@ A_B = 60
 
 Prob_estiA7 = A_B / B
 Prob_estiB7 = A_B / A
+Prob_estiA7
+Prob_estiB7
 
 #------------------Q8------------------
 #A : Probability of rain
@@ -117,13 +122,14 @@ A_B8 = 0.18
 
 Prob_estiA8 = A_B8 / B8
 Prob_estiB8 = A_B8 / A8
+Prob_estiA8
+Prob_estiB8
 
 #------------------Q9------------------
 n = 1000
 #A : getting an odd number
 #B : number less than 4
 A9 = sample(c(1,2,3,4,5,6),n,replace = T)
-A9
 Odd9 = 0
 LT4 = 0
 Both9 = 0
@@ -140,21 +146,26 @@ for (i in A9) {
 }
 
 Prob_estiA9 = Odd9 / n 
+Prob_estiA9
 Prob_estiB9 = LT4 / n
+Prob_estiB9
 Prob_estiC9 = Both9 / n
+Prob_estiC9
 #Event A&B Not Independant 
 
 #------------------Q10------------------
 n = 10000
 # A : first coin is Head
 # B : second coin is Tail
-coin1 = sample(c("H","T"), n , replace = T)
-coin2 = sample(c("H","T"), n , replace = T)
+coin1 = sample(c("H","T"), n , replace = TRUE)
+coin2 = sample(c("H","T"), n , replace = TRUE)
 
 A10 = data.frame(coin1, coin2)
 
-A10$Head = colSums(A10 == "H")
+A10$Head = rowSums(A10 == "H")
 A10$Tail = rowSums(A10 == "T")
+
+head(A10)
 
 #---------------Q11---------------
 #A : Prob of Maths Passing
@@ -245,11 +256,11 @@ coin1_Q15 = sample(c("H","T"), n, replace = T)
 coin2_Q15 = sample(c("H","T"), n, replace = T)
 coin3_Q15 = sample(c("H","T"), n, replace = T)
 DFCoin_A15 = data.frame(coin1_Q15,coin2_Q15,coin3_Q15)
-DFCoin_A15
 
-DFCoin1_Head = (DFCoin_A15$coin1_Q15 == "H");DFCoin1_Head
-DFCoin2_Head = (DFCoin_A15$coin2_Q15 == "H");DFCoin2_Head
-DFCoin3_Head = (DFCoin_A15$coin3_Q15 == "H");DFCoin3_Head
+
+DFCoin1_Head = (DFCoin_A15$coin1_Q15 == "H");
+DFCoin2_Head = (DFCoin_A15$coin2_Q15 == "H");
+DFCoin3_Head = (DFCoin_A15$coin3_Q15 == "H");
 
 pA_15 = mean(DFCoin1_Head)
 pB_15 = mean(DFCoin2_Head)
@@ -320,11 +331,10 @@ coin1_Q15 = sample(c("H","T"), n, replace = T)
 coin2_Q15 = sample(c("H","T"), n, replace = T)
 coin3_Q15 = sample(c("H","T"), n, replace = T)
 DFCoin_A15 = data.frame(coin1_Q15,coin2_Q15,coin3_Q15)
-DFCoin_A15
 
-DFCoin1_Head = (DFCoin_A15$coin1_Q15 == "H");DFCoin1_Head
-DFCoin2_Head = (DFCoin_A15$coin2_Q15 == "H");DFCoin2_Head
-DFCoin3_Head = (DFCoin_A15$coin3_Q15 == "H");DFCoin3_Head
+DFCoin1_Head = (DFCoin_A15$coin1_Q15 == "H");
+DFCoin2_Head = (DFCoin_A15$coin2_Q15 == "H");
+DFCoin3_Head = (DFCoin_A15$coin3_Q15 == "H");
 
 pA_15 = mean(DFCoin1_Head)
 pB_15 = mean(DFCoin2_Head)

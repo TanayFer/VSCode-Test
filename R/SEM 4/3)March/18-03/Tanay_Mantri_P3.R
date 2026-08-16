@@ -2,7 +2,6 @@
 #============Q1============
 n1 = 10000;
 X1 = sample(1:6, n1, replace = T)
-X1
 pmf_1 =  table(X1)/n1;
 pmf_1
 
@@ -35,7 +34,6 @@ n4 = 10000;
 X4_1 = sample(c("H","T"),n4,replace = T);  
 X4_2 = sample(c("H","T"),n4,replace = T);  
 X4 = data.frame(X4_1,X4_2)
-X4
 X4$X = rowSums(X4 == "H")
 
 pmf_4 = table(X4$X)/n4 ; pmf_4

@@ -55,7 +55,7 @@ n4 = 5000
 X4 = sample(1:4, n4, replace = T)
 Y4 = sample(1:4, n4, replace = T)
 A4 = data.frame(X4, Y4, Z4 = X4 + Y4)
-A4
+
 freq_dist4 = table(A4$Z4)
 freq_dist4
 prob_dist4 = prop.table(freq_dist4)
@@ -95,7 +95,6 @@ prob_dist6
 n7 = 5000
 p7 = 0.5
 A7 = rbinom(n7, 1, p7)
-A7
 freq_dist7 = table(A7)
 prob_dist7 = prop.table(freq_dist7)
 prob_dist7
@@ -229,7 +228,7 @@ mean19a; mean19b
 #====Q20=====
 X20 = rbinom(1000, 3, 0.5)
 Y20 = rbinom(1000, 2, 0.5)
-Z = X20 + Y20 ; Z
+Z = X20 + Y20 
 
 prob_dist20 = table(Z) / 1000
 Mean20 = mean(Z)
