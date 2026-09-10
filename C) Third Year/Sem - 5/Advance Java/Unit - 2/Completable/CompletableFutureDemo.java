@@ -6,9 +6,8 @@ class CompletableFutureDemo
     {
         CompletableFuture<String> future =
                 CompletableFuture.supplyAsync (() ->
-                {        // beginning of the lambda expression.  
-                    return "Hello from Background Thread";    // background task returns the task
-			        // This returned value becomes the result stored in the CompletableFuture.
+                {        
+                    return "Hello from Background Thread";    
                 });
                     System.out.println(future.get() );
                 
