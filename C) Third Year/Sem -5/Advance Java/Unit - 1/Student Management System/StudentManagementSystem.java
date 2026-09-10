@@ -31,7 +31,7 @@ public class StudentManagementSystem {
 
             System.out.print("Enter ID: ");
             int id = sc.nextInt();
-            sc.nextLine(); // Consume newline
+            sc.nextLine();
 
             if (studentIds.contains(id)) {
                 System.out.println("Duplicate ID! Student not added.");

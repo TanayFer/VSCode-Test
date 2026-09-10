@@ -13,7 +13,7 @@ class ExecutorDemo4
     {
         ExecutorService executor = Executors.newFixedThreadPool(3);
 
-        for(i=0;i<5;i++)
+        for(int i=0;i<5;i++)
         {
             executor.execute(new MyTasks());
         }

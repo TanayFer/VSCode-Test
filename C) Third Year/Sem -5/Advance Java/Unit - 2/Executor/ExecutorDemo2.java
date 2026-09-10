@@ -12,8 +12,6 @@ class ExecutorDemo2
     public static void main(String args[])
     {
         ExecutorService executor = Executors.newFixedThreadPool(3);
-        ExecutorService executor1 = Executors.newFixedThreadPool(2);
-        
 
         executor.execute(new MyTasks());
         executor.execute(new MyTasks());

@@ -1,4 +1,3 @@
-/* Program to create a Thread by Extending Thread Class. */
 class MyThread extends Thread
  {
     public void run() 
@@ -9,8 +8,8 @@ class MyThread extends Thread
     public static void main(String[] args) 
    {
         MyThread t1 = new MyThread();
-        t1.start();    // Starts the thread
-        System.out.println(“Main thread executed.”);
+        t1.start();
+        System.out.println("Main thread executed.”);
     }
 }
 

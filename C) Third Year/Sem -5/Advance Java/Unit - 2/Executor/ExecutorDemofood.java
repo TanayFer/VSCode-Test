@@ -36,10 +36,6 @@ public class ExecutorDemofood {
 
     public static void main(String[] args) {
 
-        // -------------------------------
-        // 1. Executor Example
-        // -------------------------------
-
         Executor executor = Executors.newFixedThreadPool(2);
 
         System.out.println("Using Executor:");
@@ -55,11 +51,6 @@ public class ExecutorDemofood {
         executor.execute(
             new FoodOrder(103, "Amit")
         );
-
-
-        // -------------------------------
-        // 2. ExecutorService Example
-        // -------------------------------
 
         ExecutorService service =
             Executors.newFixedThreadPool(3);
@@ -78,7 +69,6 @@ public class ExecutorDemofood {
             new FoodOrder(203, "Sarah")
         );
 
-        // No more tasks will be submitted
         service.shutdown();
     }
 }

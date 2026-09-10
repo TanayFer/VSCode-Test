@@ -1,5 +1,5 @@
-class Box<T> {
-    T value; // T is a placeholder for any data type
+class SimpleBox<T> {
+    T value;
 
     void set(T value) {
         this.value = value;
@@ -12,13 +12,11 @@ class Box<T> {
 
 public class GenericsExample {
     public static void main(String[] args) {
-        // Create a Box to hold a String
-        Box<String> stringBox = new Box<>();
+        SimpleBox<String> stringBox = new SimpleBox<>();
         stringBox.set("Hello");
         System.out.println("Value: " + stringBox.get());
 
-        // Create a Box to hold an Integer
-        Box<Integer> intBox = new Box<>();
+        SimpleBox<Integer> intBox = new SimpleBox<>();
         intBox.set(50);
         System.out.println("Value: " + intBox.get());
     }
