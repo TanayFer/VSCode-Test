@@ -1,4 +1,3 @@
-/* Program to demonstarte Chain Asynchronous Operations. */
 import java.util.concurrent.*;
 
 class ChainDemo

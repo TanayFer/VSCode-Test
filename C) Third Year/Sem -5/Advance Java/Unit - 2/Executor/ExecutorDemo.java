@@ -1,11 +1,9 @@
-/* Program to demonstrate Executor Framework that simplifies multithreading. */
 import java.util.concurrent.*;
 
-class MyTask implements Runnable
-{
+class MyTasks implements Runnable{
     public void run()
     {
-        System.out.println("Task executed by " + Thread.currentThread().getName());
+        System.out.println("Tasks Perfomed by "+Thread.currentThread().getName());
     }
 }
 
@@ -15,8 +13,8 @@ class ExecutorDemo
     {
         ExecutorService executor = Executors.newFixedThreadPool(2);
 
-        executor.execute(new MyTask());
-        executor.execute(new MyTask());
+        executor.execute(new MyTasks());
+        executor.execute(new MyTasks());
 
         executor.shutdown();
     }
