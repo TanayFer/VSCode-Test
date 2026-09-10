@@ -1,4 +1,3 @@
-/* Program 2: To create a Thread by Implementing Runnable Interface */
 class MyRunnable implements Runnable 
  {
     public void run() 

@@ -1,5 +1,4 @@
-/* To create the thread and to demonstrate use of sleep() Method.  */
-class SleepThread extends Thread 
+class Example4SleepThread extends Thread 
 {
     public void run() 
    {
@@ -8,7 +7,7 @@ class SleepThread extends Thread
           System.out.println(i);
          try 
            {
-                Thread.sleep(1000);   // Pause for 1 second
+                Thread.sleep(1000);
              }
          catch(InterruptedException e) 
           {
@@ -22,7 +21,7 @@ public class ThreadExample4
 {
     public static void main(String[] args) 
     {
-        SleepThread t = new SleepThread();
+        Example4SleepThread t = new Example4SleepThread();
         t.start();
     }
 }

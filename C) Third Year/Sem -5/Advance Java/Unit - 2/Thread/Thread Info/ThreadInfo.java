@@ -1,4 +1,4 @@
-class Thread1 extends Thread 
+class InfoThread extends Thread 
 {
      public void run() 
       {
@@ -12,7 +12,7 @@ public class ThreadInfo
 {
     public static void main(String[] args)
  {
-        Thread1 t1 = new Thread1();
+        InfoThread t1 = new InfoThread();
         System.out.println(t1);  
             t1.start();
        System.out.println("Hello Students....");

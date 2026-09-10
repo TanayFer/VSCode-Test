@@ -1,5 +1,4 @@
-/*  To demonstrate the use of  join() method. */
-class MyThread extends Thread 
+class Example5Thread extends Thread 
 {
      public void run() 
    {
@@ -14,9 +13,9 @@ public class ThreadExample5
 {
      public static void main(String[] args) throws Exception 
      {
-        MyThread t = new MyThread();
+        Example5Thread t = new Example5Thread();
         t.start();
-        t.join();   // Wait until child thread finishes
+        t.join();  
         System.out.println("Main Thread Ends");
     }
 }

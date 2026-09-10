@@ -1,4 +1,4 @@
-class MyThread extends Thread
+class BasicThread extends Thread
  {
     public void run() 
     {
@@ -7,9 +7,9 @@ class MyThread extends Thread
 
     public static void main(String[] args) 
    {
-        MyThread t1 = new MyThread();
+        BasicThread t1 = new BasicThread();
         t1.start();
-        System.out.println("Main thread executed.”);
+        System.out.println("Main thread executed.");
     }
 }
 
