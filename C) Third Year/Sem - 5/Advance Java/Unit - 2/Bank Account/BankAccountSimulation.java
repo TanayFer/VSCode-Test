@@ -1,7 +1,3 @@
-/* Q 5. Implement a bank account simulation — multiple threads perform deposits and withdrawals; demonstrate the race condition first,
- then fix it with synchronisation; show correct final balance */ 
-
-
 class BankAccount {
 
     private int balance;
@@ -10,7 +6,6 @@ class BankAccount {
         this.balance = balance;
     }
 
-    // UNSYNCHRONIZED - Race condition
     public void withdrawUnsafe(int amount) {
 
         if (balance >= amount) {
@@ -19,7 +14,6 @@ class BankAccount {
                 Thread.currentThread().getName() + " withdrawing " + amount
             );
 
-            // Deliberately create a chance for race condition
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
@@ -30,7 +24,6 @@ class BankAccount {
         }
     }
 
-    // SYNCHRONIZED - Race condition fixed
     public synchronized void withdrawSafe(int amount) {
 
         if (balance >= amount) {
@@ -65,9 +58,6 @@ public class BankAccountSimulation {
 
     public static void main(String[] args) throws InterruptedException {
 
-        // =====================================================
-        // PART 1: RACE CONDITION
-        // =====================================================
 
         System.out.println("===== RACE CONDITION =====");
 
@@ -91,11 +81,6 @@ public class BankAccountSimulation {
             "Final Balance (Unsafe): "
             + account1.getBalance()
         );
-
-
-        // =====================================================
-        // PART 2: SYNCHRONIZATION
-        // =====================================================
 
         System.out.println("\n===== SYNCHRONIZATION =====");
 

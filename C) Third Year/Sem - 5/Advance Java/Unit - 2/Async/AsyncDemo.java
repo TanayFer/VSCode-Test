@@ -1,4 +1,3 @@
-/* Program to demonstrate Asynchronous Programming. */
 import java.util.concurrent.*;
 
 class AsyncDemo
