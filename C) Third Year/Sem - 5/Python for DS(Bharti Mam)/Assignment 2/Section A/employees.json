@@ -1,0 +1,34 @@
+{
+  "Employees": [
+    {
+      "empId": "EMP01",
+      "jobTitle": "Developer",
+      "firstName": "Shivang",
+      "lastName": "Yadav",
+      "fullName": "Shivang Yadav",
+      "address": "Indore, MP, India",
+      "contact": "+91-9999999999",
+      "email": "shivang.yadavji@gmail.com"
+    },
+    {
+      "empId": "EMP02",
+      "jobTitle": "Jr. Developer",
+      "firstName": "Alvin",
+      "lastName": "Alexander",
+      "fullName": "Alvin Alexander",
+      "address": "New Delhi, India",
+      "contact": "+91-9999999999",
+      "email": "heyitsalvinalex@gmail.com"
+    },
+    {
+      "empId": "EMP03",
+      "jobTitle": "Manager",
+      "firstName": "Kuldeep",
+      "lastName": "Tak",
+      "fullName": "Kuldeep Tak",
+      "address": "Mumbai, India",
+      "contact": "+91-9999999999",
+      "email": "kdtak13@gmail.com"
+    }
+  ]
+}
