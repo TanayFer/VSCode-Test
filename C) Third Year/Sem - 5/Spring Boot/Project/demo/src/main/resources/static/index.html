@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Parking Console Controller</title>
+</head>
+<body style="font-family: monospace; background: #121212; color: #00ff88; padding: 30px;">
+    <h2>SMART PARKING TERMINAL (CONSOLE CONTROLLER)</h2>
+    
+    <div>
+        <input id="vNo" placeholder="Vehicle No (e.g. MH12AB1234)" style="padding: 8px;" />
+        <select id="vType" style="padding: 8px;">
+            <option value="COMPACT">COMPACT (Rs. 40/hr)</option>
+            <option value="SUV">SUV (Rs. 60/hr)</option>
+        </select>
+        <button onclick="park()" style="padding: 8px 15px; cursor: pointer;">PARK VEHICLE</button>
+    </div>
+
+    <hr style="border-color: #333; margin: 25px 0;">
+
+    <div>
+        <input id="sId" placeholder="Slot ID (e.g. C-01)" style="padding: 8px;" />
+        <input id="hrs" type="number" value="3" min="1" style="width: 60px; padding: 8px;" /> hrs
+        <button onclick="exitLot()" style="padding: 8px 15px; cursor: pointer;">EXIT & GENERATE BILL</button>
+    </div>
+
+    <p id="status" style="color: #ffffff; margin-top: 25px; font-size: 16px;">Ready. Watch the terminal for the live grid.</p>
+
+    <script>
+        const API = "/api/parking";
+
+        async function request(path) {
+            const response = await fetch(`${API}${path}`, { method: "POST" });
+            const message = await response.text();
+            document.getElementById("status").innerText = message || "No response from server.";
+        }
+
+        function park() {
+            const vehicleNo = document.getElementById("vNo").value;
+            const type = document.getElementById("vType").value;
+            request(`/park?vehicleNo=${encodeURIComponent(vehicleNo)}&type=${encodeURIComponent(type)}`)
+                .catch(showRequestError);
+        }
+
+        function exitLot() {
+            const s = document.getElementById("sId").value;
+            const h = document.getElementById("hrs").value;
+            request(`/exit?slotId=${encodeURIComponent(s)}&simulatedHours=${encodeURIComponent(h)}`)
+                .catch(showRequestError);
+        }
+
+        function showRequestError() {
+            document.getElementById("status").innerText = "ERROR: Parking server is unavailable.";
+        }
+    </script>
+</body>
+</html>
